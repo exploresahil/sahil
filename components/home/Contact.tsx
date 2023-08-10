@@ -5,8 +5,10 @@ import { useRef, useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "@emailjs/browser";
+import Lottie from "lottie-react";
+import { TiTick } from "react-icons/ti";
 
-import Button from "../default/Button";
+import loading from "@/components/default/loading.json";
 
 import clouds from "@/public/images/assets/pink-clouds.png";
 import Img from "../default/Img";
@@ -15,11 +17,49 @@ import Star from "../icons/Star";
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [isEmailSent, setIsEmailSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (form.current) {
+      showLoading();
+      try {
+        const result = await emailjs.sendForm(
+          "service_m1jb0h7",
+          "template_mtt26pg",
+          form.current,
+          "3BqcQQwx-yjPI9VdD"
+        );
+        console.log(result.text);
+        setIsEmailSent(true);
+        setTimeout(() => {
+          setIsEmailSent(false);
+        }, 2000);
+        form.current.reset();
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          console.log(error.message); // Log the error message
+        }
+      } finally {
+        hideLoading();
+      }
+    }
+  };
+
+  const showLoading = () => {
+    setIsLoading(true);
+  };
+
+  const hideLoading = () => {
+    setIsLoading(false);
+  };
+
+  /* const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      setIsLoading(true); // Show loading animation
       emailjs
         .sendForm(
           "service_m1jb0h7",
@@ -44,7 +84,7 @@ const Contact = () => {
           }
         );
     }
-  };
+  }; */
 
   const textRef = useRef(null);
 
@@ -110,8 +150,17 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className="button-container">
-              <Button type="submit" title="Send" />
-              {isEmailSent && <p className="success-message">Message Sent!</p>}
+              <button type="submit">
+                {isLoading ? (
+                  <Lottie animationData={loading} />
+                ) : isEmailSent ? (
+                  <>
+                    Sent! <TiTick />
+                  </>
+                ) : (
+                  "Send"
+                )}
+              </button>
             </div>
           </form>
           <MouseParallax

@@ -96,14 +96,30 @@
           gap: 20px;
 
           button {
+            min-width: 120px;
             margin-top: 10px;
+            height: 40px;
             background-color: $light;
             color: $dark;
             transition: all 200ms ease-in-out;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
 
             &:hover {
               transition: all 400ms ease-in-out;
               background-color: $blue;
+            }
+
+            div {
+              width: 100px;
+              height: 100px;
+              position: absolute;
+              top: -30px;
+              left: 10px;
             }
           }
 
