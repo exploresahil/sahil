@@ -116,15 +116,15 @@
         right: -150px;
         fill: $green;
 
-        animation: rotate 50s linear infinite forwards;
+        animation: rotateTwo 50s linear infinite forwards;
 
-        @keyframes rotate {
+        @keyframes rotateTwo {
           0% {
             transform: rotate(0);
           }
 
           100% {
-            transform: rotate(360deg);
+            transform: rotate(-360deg);
           }
         }
       }
