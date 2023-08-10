@@ -58,6 +58,10 @@ button {
 
   font-family: $helvetica-regular;
   color: $light;
+
+  &:hover {
+    background-color: $blue;
+  }
 }
 
 .img-container {
@@ -66,4 +70,8 @@ button {
   img {
     inset: 0;
   }
+}
+
+input {
+  width: 100%;
 }

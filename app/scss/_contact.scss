@@ -1,0 +1,165 @@
+@use "./variables" as *;
+
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form-main {
+    display: flex;
+    width: 1000px;
+    height: 550px;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .form-container {
+      position: relative;
+      width: 500px;
+      background-color: $dark;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      form {
+        position: relative;
+        z-index: 1;
+        color: $light;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 10px;
+        mix-blend-mode: difference;
+
+        h3 {
+          font-family: $soria;
+          font-size: 2rem;
+          letter-spacing: 1px;
+        }
+
+        .field {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        label {
+          color: $light;
+        }
+
+        input,
+        textarea {
+          background: none;
+          border: 1px solid $light;
+          resize: none;
+          color: $light;
+          border-radius: 5px;
+          padding: 10px 10px;
+          font-family: $helvetica-regular;
+          font-size: 0.9rem;
+
+          &:focus {
+            outline: none;
+            border: 1px solid $blue;
+          }
+        }
+
+        textarea {
+          height: 100px;
+        }
+
+        button {
+          margin-top: 10px;
+          background-color: $light;
+          color: $dark;
+          transition: all 200ms ease-in-out;
+
+          &:hover {
+            transition: all 400ms ease-in-out;
+            background-color: $blue;
+          }
+        }
+      }
+
+      .starOne {
+        position: absolute;
+        z-index: 0;
+        width: 400px;
+        height: 400px;
+        top: -200px;
+        left: -200px;
+        fill: $yellow;
+
+        animation: rotate 50s linear infinite forwards;
+
+        @keyframes rotate {
+          0% {
+            transform: rotate(0);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      .starTwo {
+        position: absolute;
+        z-index: 0;
+        width: 300px;
+        height: 300px;
+        bottom: -150px;
+        right: -150px;
+        fill: $green;
+
+        animation: rotate 50s linear infinite forwards;
+
+        @keyframes rotate {
+          0% {
+            transform: rotate(0);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
+    .video-container {
+      position: relative;
+      width: 500px;
+      background-color: $pink;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      video {
+        position: absolute;
+        z-index: 1;
+        width: 400px;
+        height: 400px;
+        inset: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .clouds-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .img-container {
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

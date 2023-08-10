@@ -28,7 +28,7 @@ const About = () => {
               data-aos-easing="ease-in-out"
               data-aos-duration="500"
             >
-              <p>hello,</p>
+              <p className="hello">hello,</p>
               <p>
                 my name is <span>sahil satpute</span>
               </p>
@@ -84,9 +84,6 @@ const About = () => {
           <Img src={sahilMask} alt="Profile image of Sahil Satpute" />
         </div>
       </div>
-      {/* <div className="star-container">
-        <Star className="star" />
-      </div> */}
     </div>
   );
 };
