@@ -24,6 +24,7 @@ const Hero = () => {
         opacity: 1,
         ease: "power1.out",
         stagger: 0.1,
+        delay: 2.8,
       }
     );
 
@@ -38,7 +39,7 @@ const Hero = () => {
         opacity: 1,
         ease: "power1.out",
         stagger: 0.1,
-        delay: 0.2,
+        delay: 3,
       }
     );
   }, []);
@@ -47,10 +48,10 @@ const Hero = () => {
     <section className="hero-container">
       <div className="container">
         <div className="headline">
-          <p className="textOne" data-scroll data-scroll-speed="0.6">
+          <p className="textOne" data-scroll data-scroll-speed="0.8">
             I Craft Digital Experiences,
           </p>
-          <div className="line-second" data-scroll data-scroll-speed="0.6">
+          <div className="line-second" data-scroll data-scroll-speed="0.8">
             <p className="textTwo">
               Turning <span className="pink">pixels</span> into{" "}
               <span className="pink">possibilities</span>

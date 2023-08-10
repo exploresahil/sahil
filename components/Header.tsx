@@ -1,26 +1,29 @@
-import Link from "next/link";
-import Img from "./default/Img";
+"use client";
 
+import Link from "next/link";
+import { Link as ScrollTo } from "react-scroll";
+
+import Img from "./default/Img";
 import sahil from "@/public/images/logo/sahil.png";
 
 const navItems = [
   {
     title: "about",
-    href: "#about",
+    href: "about",
   },
   {
     title: "portfolio",
-    href: "#portfolio",
+    href: "portfolio",
   },
   {
     title: "contact",
-    href: "#contact",
+    href: "contact",
   },
 ];
 
 const Header = () => {
   return (
-    <header>
+    <header id="header">
       <Link className="logo" href="/">
         <Img src={sahil} alt="Profile image of Sahil Satpute" fit="cover" />
         <h2>sahil satpute</h2>
@@ -33,7 +36,20 @@ const Header = () => {
                 <div className="dot-container">
                   <div className="dot" />
                 </div>
-                <Link href={item.href}>{item.title}</Link>
+                {item.href === "contact" ? (
+                  <ScrollTo
+                    to={item.href}
+                    spy={true}
+                    smooth={true}
+                    offset={100}
+                  >
+                    {item.title}
+                  </ScrollTo>
+                ) : (
+                  <ScrollTo to={item.href} spy={true} smooth={true}>
+                    {item.title}
+                  </ScrollTo>
+                )}
               </li>
             ))}
           </ul>

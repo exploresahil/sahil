@@ -1,6 +1,9 @@
 "use client";
 
-import { MouseParallax, ScrollParallax } from "react-just-parallax";
+import { MouseParallax } from "react-just-parallax";
+import { useRef, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Button from "../default/Button";
 
@@ -9,8 +12,36 @@ import Img from "../default/Img";
 import Star from "../icons/Star";
 
 const Contact = () => {
+  const textRef = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo(
+      textRef.current,
+      {
+        x: 0,
+      },
+      {
+        x: -1000,
+        scrollTrigger: {
+          trigger: textRef.current,
+          //markers: true,
+          scrub: 0.2,
+          start: "top bottom",
+          end: "200px top",
+        },
+      }
+    );
+  }, []);
+
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
+      <div className="headline">
+        <h2 ref={textRef}>
+          let"s work together • let"s work together • let"s work together •
+          let"s work together •
+        </h2>
+      </div>
       <div className="form-main">
         <div className="form-container">
           <form>

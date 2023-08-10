@@ -67,10 +67,10 @@ const About = () => {
             data-aos-easing="ease-in-out"
           >
             <ul>
-              <li>HTML | CSS | JS | REACT | NEXT.</li>
+              <li>HTML | CSS | JS | REACT | NEXT</li>
               <li>
                 Adobe XD | Adobe Illustrator | Adobe Lightroom | Adobe Photoshop
-                | Adobe Premiere Pro | Adobe After Effects | Adobe Dimension.
+                | Adobe Premiere Pro | Adobe After Effects | Adobe Dimension
               </li>
               <li>Stable Diffusion</li>
             </ul>

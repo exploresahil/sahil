@@ -1,0 +1,32 @@
+@use "./variables" as *;
+
+footer {
+  width: 100vw;
+  height: 100px;
+  padding: 0 8vw;
+  background-color: $darkBlue;
+  border-radius: 20px 20px 0 0;
+  color: $light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h4 {
+    font-family: $soria;
+    font-size: 1.4rem;
+    font-weight: 100;
+    word-spacing: 1.8px;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+
+  p {
+    display: flex;
+    gap: 20px;
+    font-size: 0.8rem;
+
+    a {
+      color: $yellow;
+    }
+  }
+}
