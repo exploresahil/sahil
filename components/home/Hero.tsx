@@ -47,11 +47,11 @@ const Hero = () => {
     <section className="hero-container">
       <div className="container">
         <div className="headline">
-          <p data-scroll data-scroll-speed="0.8" className="textOne">
+          <p className="textOne" data-scroll data-scroll-speed="0.8">
             I Craft Digital Experiences,
           </p>
-          <div className="line-second">
-            <p className="textTwo" data-scroll data-scroll-speed="0.6">
+          <div className="line-second" data-scroll data-scroll-speed="0.8">
+            <p className="textTwo">
               Turning <span className="pink">pixels</span> into{" "}
               <span className="pink">possibilities</span>
             </p>
@@ -60,7 +60,7 @@ const Hero = () => {
         <div data-scroll data-scroll-speed="1" className="star-container">
           <Star className="star" />
         </div>
-        <div data-scroll data-scroll-speed="0.8" className="men-container">
+        <div data-scroll data-scroll-speed="-0.8" className="men-container">
           <Img
             src={fourMen}
             alt="four men standing nextb to each other poster"

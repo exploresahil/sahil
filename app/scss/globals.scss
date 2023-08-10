@@ -1,8 +1,4 @@
 @use "./defaultrs.scss";
 @use "./header";
 @use "./hero";
-
-.about-container {
-  width: 100vw;
-  height: 100vh;
-}
+@use "./about";
