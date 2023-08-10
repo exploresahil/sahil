@@ -90,15 +90,26 @@
           height: 100px;
         }
 
-        button {
-          margin-top: 10px;
-          background-color: $light;
-          color: $dark;
-          transition: all 200ms ease-in-out;
+        .button-container {
+          display: flex;
+          align-items: center;
+          gap: 20px;
 
-          &:hover {
-            transition: all 400ms ease-in-out;
-            background-color: $blue;
+          button {
+            margin-top: 10px;
+            background-color: $light;
+            color: $dark;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+              transition: all 400ms ease-in-out;
+              background-color: $blue;
+            }
+          }
+
+          p {
+            margin-top: 10px;
+            color: $green;
           }
         }
       }

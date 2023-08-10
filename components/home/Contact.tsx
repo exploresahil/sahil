@@ -1,9 +1,10 @@
 "use client";
 
 import { MouseParallax } from "react-just-parallax";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import emailjs from "@emailjs/browser";
 
 import Button from "../default/Button";
 
@@ -12,6 +13,39 @@ import Img from "../default/Img";
 import Star from "../icons/Star";
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement | null>(null);
+  const [isEmailSent, setIsEmailSent] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_m1jb0h7",
+          "template_mtt26pg",
+          form.current,
+          "3BqcQQwx-yjPI9VdD"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log("Sent");
+            setIsEmailSent(true);
+
+            // Hide the success message after 3 seconds
+            setTimeout(() => {
+              setIsEmailSent(false);
+            }, 3000);
+          },
+          (error) => {
+            console.log(error.text);
+            console.log("Not Sent");
+          }
+        );
+    }
+  };
+
   const textRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -44,13 +78,13 @@ const Contact = () => {
       </div>
       <div className="form-main">
         <div className="form-container">
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <h3>Contact</h3>
             <div className="field name">
               <label htmlFor="name">Name:</label>
               <input
                 type="text"
-                name="name"
+                name="user_name"
                 id="name"
                 placeholder="Enter your name"
                 required
@@ -60,7 +94,7 @@ const Contact = () => {
               <label htmlFor="email">Email:</label>
               <input
                 type="email"
-                name="email"
+                name="user_email"
                 id="email"
                 placeholder="Enter your email"
                 required
@@ -75,7 +109,10 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            <Button title="Send" />
+            <div className="button-container">
+              <Button type="submit" title="Send" />
+              {isEmailSent && <p className="success-message">Message Sent!</p>}
+            </div>
           </form>
           <MouseParallax
             isAbsolutelyPositioned
