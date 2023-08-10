@@ -78,7 +78,7 @@ const Hero = () => {
           <div className="line-second" data-scroll data-scroll-speed="0.6">
             <p className="textTwo">
               Turning <span className="pink">pixels</span> into{" "}
-              <span className="pink">possibilities</span>
+              <span className="pink">possibilities.</span>
             </p>
           </div>
         </div>
