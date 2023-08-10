@@ -2,6 +2,7 @@
 
 import About from "@/components/home/About";
 import Hero from "@/components/home/Hero";
+import Portfolio from "@/components/home/Portfolio";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
+      <Portfolio />
     </>
   );
 }
