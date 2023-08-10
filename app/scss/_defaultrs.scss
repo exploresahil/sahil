@@ -1,0 +1,69 @@
+@use "./variables.scss" as *;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $helvetica-regular;
+  background-color: $light;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+
+  li {
+    font-family: $helvetica-regular;
+    font-size: 14px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+title,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  height: fit-content;
+  width: fit-content;
+
+  background: none;
+  outline: none;
+  border: none;
+
+  border-radius: 100px;
+  cursor: pointer;
+
+  background-color: $dark;
+  padding: 0.5em 2em;
+  font-size: 1rem;
+
+  font-family: $helvetica-regular;
+  color: $light;
+}
+
+.img-container {
+  position: relative;
+
+  img {
+    inset: 0;
+  }
+}

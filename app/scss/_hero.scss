@@ -1,0 +1,115 @@
+@use "./variables" as *;
+
+.hero-container {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  padding: 0 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    .headline {
+      margin-top: -100px;
+      width: 100%;
+      height: 100%;
+      padding: 0 150px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      //flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      line-height: 1;
+
+      p {
+        position: relative;
+        font-family: $helvetica-light;
+        font-size: 5.5rem;
+        text-transform: capitalize;
+        width: 400px;
+
+        .pink {
+          color: $pink;
+        }
+      }
+
+      .line-second {
+        display: flex;
+      }
+    }
+
+    .star-container {
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .star {
+        width: 1250px;
+        height: 1250px;
+        z-index: 1;
+        fill: $yellow;
+
+        margin-top: 100px;
+
+        animation: rotate 50s linear infinite forwards;
+
+        @keyframes rotate {
+          0% {
+            transform: rotate(0);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+
+    .men-container {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      inset: 0;
+      z-index: 1;
+
+      animation: fadeUp 800ms ease-in-out 500ms;
+
+      @keyframes fadeUp {
+        0% {
+          top: 400px;
+          opacity: 0;
+        }
+        100% {
+          top: 0px;
+          opacity: 1;
+        }
+      }
+
+      .img-container {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+          filter: saturate(0.75);
+        }
+      }
+    }
+  }
+}
