@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header id="header">
       <Link className="logo" href="/">
-        <Img src={sahil} alt="Profile image of Sahil Satpute" fit="cover" />
+        <Img src={sahil} alt="Profile image of Sahil Satpute" />
         <h2>sahil satpute</h2>
       </Link>
       <div className="menu-container">

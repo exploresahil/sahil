@@ -113,13 +113,14 @@
               transition: all 400ms ease-in-out;
               background-color: $blue;
             }
+          }
 
-            div {
-              width: 100px;
-              height: 100px;
-              position: absolute;
-              top: -30px;
-              left: 10px;
+          .loading-button {
+            background-color: $offLight;
+            pointer-events: none;
+
+            &:hover {
+              background-color: $offLight;
             }
           }
 

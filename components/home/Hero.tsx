@@ -7,46 +7,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Star from "../icons/Star";
 import Img from "../default/Img";
 import fourMen from "@/public/images/assets/four-men.png";
-import SplitType from "split-type";
 
 const Hero = () => {
   const scrollInfoRef = useRef(null);
 
   useLayoutEffect(() => {
-    const textOne = new SplitType(".textOne", { types: "lines" });
-    const textTwo = new SplitType(".textTwo", { types: "lines" });
-
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.fromTo(
-      textOne.lines,
-      {
-        y: 80,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        ease: "power1.out",
-        stagger: 0.1,
-        delay: 2.8,
-      }
-    );
-
-    gsap.fromTo(
-      textTwo.lines,
-      {
-        y: 80,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        ease: "power1.out",
-        stagger: 0.1,
-        delay: 3,
-      }
-    );
 
     gsap.fromTo(
       scrollInfoRef.current,
@@ -71,19 +37,26 @@ const Hero = () => {
   return (
     <section className="hero-container">
       <div className="container">
-        <div className="headline">
-          <p className="textOne" data-scroll data-scroll-speed="0.6">
-            I Craft Digital Experiences,
-          </p>
-          <div className="line-second" data-scroll data-scroll-speed="0.6">
+        <div className="headline" data-scroll data-scroll-speed="0.2">
+          <div className="line-first">
+            <p className="textOne">I Craft</p>
+            <p className="textOne">Digital</p>
+            <p className="textOne">Experiences,</p>
+          </div>
+          <div className="line-second">
+            <p className="textTwo">Turning</p>
             <p className="textTwo">
-              Turning <span className="pink">pixels</span> into{" "}
+              <span className="pink">pixels</span> into
+            </p>
+            <p className="textTwo">
               <span className="pink">possibilities.</span>
             </p>
           </div>
         </div>
-        <div data-scroll data-scroll-speed="1" className="star-container">
-          <Star className="star" />
+        <div className="star-main" data-scroll data-scroll-speed="0.9">
+          <div className="star-container">
+            <Star className="star" />
+          </div>
         </div>
         <div data-scroll data-scroll-speed="0.5" className="men-container">
           <Img

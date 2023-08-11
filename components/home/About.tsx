@@ -7,14 +7,18 @@ import Marquee from "react-fast-marquee";
 import Img from "../default/Img";
 
 import sahilMask from "@/public/images/logo/sahil-mask.png";
-import Star from "../icons/Star";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const About = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      disable: function () {
+        var maxWidth = 1250;
+        return window.innerWidth < maxWidth;
+      },
+    });
   }, []);
 
   return (
@@ -36,11 +40,11 @@ const About = () => {
               <div className="features">
                 <Marquee pauseOnHover={true}>
                   <p>
-                    UI design • Front-End • React • Nest • Gsap • Locomotive •
+                    UI design • Front-End • React • Next • Gsap • Locomotive •
                     Web Animations •
                   </p>
                   <p>
-                    UI design • Front-End • React • Nest • Gsap • Locomotive •
+                    UI design • Front-End • React • Next • Gsap • Locomotive •
                     Web Animations •
                   </p>
                 </Marquee>

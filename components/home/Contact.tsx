@@ -5,14 +5,12 @@ import { useRef, useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "@emailjs/browser";
-import Lottie from "lottie-react";
 import { TiTick } from "react-icons/ti";
-
-import loading from "@/components/default/loading.json";
-
+import dynamic from "next/dynamic";
 import clouds from "@/public/images/assets/pink-clouds.png";
 import Img from "../default/Img";
 import Star from "../icons/Star";
+import LoadingAnim from "../default/LoadingAnim";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -35,7 +33,7 @@ const Contact = () => {
         setIsEmailSent(true);
         setTimeout(() => {
           setIsEmailSent(false);
-        }, 2000);
+        }, 1500);
         form.current.reset();
       } catch (error: unknown) {
         if (error instanceof Error) {
@@ -54,37 +52,6 @@ const Contact = () => {
   const hideLoading = () => {
     setIsLoading(false);
   };
-
-  /* const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (form.current) {
-      setIsLoading(true); // Show loading animation
-      emailjs
-        .sendForm(
-          "service_m1jb0h7",
-          "template_mtt26pg",
-          form.current,
-          "3BqcQQwx-yjPI9VdD"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            console.log("Sent");
-            setIsEmailSent(true);
-
-            // Hide the success message after 3 seconds
-            setTimeout(() => {
-              setIsEmailSent(false);
-            }, 3000);
-          },
-          (error) => {
-            console.log(error.text);
-            console.log("Not Sent");
-          }
-        );
-    }
-  }; */
 
   const textRef = useRef(null);
 
@@ -150,9 +117,12 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className="button-container">
-              <button type="submit">
+              <button
+                type="submit"
+                className={isLoading ? "loading-button" : ""}
+              >
                 {isLoading ? (
-                  <Lottie animationData={loading} />
+                  <LoadingAnim />
                 ) : isEmailSent ? (
                   <>
                     Sent! <TiTick />
@@ -198,4 +168,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default dynamic(() => Promise.resolve(Contact), { ssr: false });

@@ -1,130 +1,133 @@
 @use "./variables" as *;
 
-.about-container {
-  width: 100vw;
-  height: 100vh;
-  padding: 0 8vw;
-  position: relative;
-
-  .sahil-info-container {
+@media screen and (min-width: 1280px) {
+  .about-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 8vw;
     position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    padding: 0 6vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    .sahil-mask-container {
-      margin-top: -50px;
+    .sahil-info-container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      padding: 0 6vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      .img-container {
-        width: 400px;
-        height: 400px;
+      .sahil-mask-container {
+        margin-top: -50px;
+        pointer-events: none;
+
+        .img-container {
+          width: 400px;
+          height: 400px;
+        }
       }
-    }
-    .info-container {
-      .info-top {
-        display: flex;
+      .info-container {
+        .info-top {
+          display: flex;
 
-        .info {
-          color: $darkBlue;
-          font-size: 1.6rem;
-          width: 300px;
-          height: 140px;
-          padding-top: 20px;
+          .info {
+            color: $darkBlue;
+            font-size: 1.6rem;
+            width: 300px;
+            height: 140px;
+            padding-top: 20px;
 
-          p {
-            font-family: $helvetica-regular;
+            p {
+              font-family: $helvetica-regular;
 
-            span {
-              color: $red;
+              span {
+                color: $red;
+              }
+            }
+
+            .hello {
+              font-family: $soria;
+              font-size: 2rem;
+              line-height: 0.7;
             }
           }
 
-          .hello {
-            font-family: $soria;
-            font-size: 2rem;
-            line-height: 0.7;
-          }
-        }
-
-        .left {
-          .features {
-            position: relative;
-            white-space: nowrap;
-            width: 260px;
-            margin-top: 10px;
-            overflow: hidden;
-
-            p {
+          .left {
+            .features {
               position: relative;
-              margin: 0px;
-              padding-right: 3px;
-              font-size: 0.8rem;
-              text-transform: uppercase;
-              color: $dark;
-              font-family: $helvetica-medium;
+              white-space: nowrap;
+              width: 260px;
+              margin-top: 10px;
+              overflow: hidden;
 
-              &:nth-of-type(2) {
-                position: absolute;
-                left: 100%;
-                top: 0;
+              p {
+                position: relative;
+                margin: 0px;
+                padding-right: 3px;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                color: $dark;
+                font-family: $helvetica-medium;
+
+                &:nth-of-type(2) {
+                  position: absolute;
+                  left: 100%;
+                  top: 0;
+                }
               }
             }
           }
-        }
 
-        .right {
-          margin-top: 30px;
-          p {
-            font-size: 1rem;
-            color: $dark;
+          .right {
+            margin-top: 30px;
+            p {
+              font-size: 1rem;
+              color: $dark;
+            }
           }
         }
-      }
 
-      .bio-container {
-        width: 600px;
+        .bio-container {
+          width: 600px;
 
-        ul {
-          list-style: disc;
-          border-top: 1px solid $dark;
-          padding-top: 20px;
+          ul {
+            list-style: disc;
+            border-top: 1px solid $dark;
+            padding-top: 20px;
 
-          li {
-            font-size: 1rem;
-            text-transform: lowercase;
-            color: $darkBlue;
+            li {
+              font-size: 1rem;
+              text-transform: lowercase;
+              color: $darkBlue;
+            }
           }
         }
       }
     }
-  }
 
-  .star-container {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-
-    .star {
-      width: 800px;
-      height: 800px;
-      fill: $green;
+    .star-container {
       position: absolute;
-      top: 0;
-      left: -400px;
+      inset: 0;
+      z-index: 0;
 
-      animation: rotate 50s linear infinite forwards;
+      .star {
+        width: 800px;
+        height: 800px;
+        fill: $green;
+        position: absolute;
+        top: 0;
+        left: -400px;
 
-      @keyframes rotate {
-        0% {
-          transform: rotate(0);
-        }
+        animation: rotate 50s linear infinite forwards;
 
-        100% {
-          transform: rotate(360deg);
+        @keyframes rotate {
+          0% {
+            transform: rotate(0);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
         }
       }
     }

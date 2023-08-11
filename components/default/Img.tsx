@@ -5,7 +5,7 @@ interface ImgProps {
   className?: string;
   src: any;
   alt: string;
-  fit?: "fill" | "contain" | "cover" | "none" | "scale-down";
+
   dataScroll?: boolean;
   dataScrollSpeed?: number;
   ref?: any;
@@ -15,7 +15,7 @@ const Img: FC<ImgProps> = ({
   className,
   src,
   alt,
-  fit,
+
   dataScroll,
   dataScrollSpeed,
   ref,
@@ -32,7 +32,7 @@ const Img: FC<ImgProps> = ({
       className={combinedContainerClass}
       ref={ref}
     >
-      <Image fill={true} priority={true} src={src} alt={alt} objectFit={fit} />
+      <Image sizes="100%" fill={true} priority={true} src={src} alt={alt} />
     </div>
   );
 };

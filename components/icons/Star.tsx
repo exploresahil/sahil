@@ -18,7 +18,7 @@ const Star: FC<StarProps> = ({ className }) => {
       opacity: 0,
       ease: "power4.out",
       duration: 1.2,
-      delay: 3,
+      delay: 3.2,
     });
   }, []);
 
