@@ -14,7 +14,10 @@ import "aos/dist/aos.css";
 const About = () => {
   useEffect(() => {
     AOS.init({
-      disable: "mobile",
+      disable: function () {
+        var maxWidth = 1250;
+        return window.innerWidth < maxWidth;
+      },
     });
   }, []);
 
