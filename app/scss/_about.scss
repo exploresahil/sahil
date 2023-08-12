@@ -21,6 +21,7 @@
 
         .left {
           font-size: 1.8rem;
+          line-height: 1.2;
 
           .hello {
             font-family: $soria;
@@ -46,7 +47,7 @@
       }
 
       .bio-container {
-        margin-top: 420px;
+        margin-top: 460px;
         color: $darkBlue;
         padding-left: 10px;
 
@@ -65,7 +66,7 @@
 
     .sahil-mask-container {
       position: absolute;
-      top: 280px;
+      top: 260px;
       width: calc(100vw - 6vw);
       height: calc(100vw - 6vw);
       display: flex;
@@ -102,7 +103,7 @@
         }
 
         .bio-container {
-          margin-top: 900px;
+          margin-top: 800px;
 
           ul {
             li {
@@ -113,6 +114,7 @@
       }
 
       .sahil-mask-container {
+        position: absolute;
         top: 150px;
 
         .img-container {
@@ -124,136 +126,64 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) and (max-width: 1367px) and (orientation: landscape) {
   .about-container {
-    width: 100vw;
+    margin: 0;
     height: 100vh;
-    padding: 0 8vw;
-    position: relative;
 
     .sahil-info-container {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      padding: 0 6vw;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      .sahil-mask-container {
-        margin-top: -50px;
-        pointer-events: none;
-
-        .img-container {
-          width: 400px;
-          height: 400px;
-        }
-      }
       .info-container {
+        width: auto;
+        width: 58vw;
+
         .info-top {
-          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 20px;
 
           .info {
-            color: $darkBlue;
-            font-size: 1.6rem;
-            width: 300px;
-            height: 140px;
-            padding-top: 20px;
-
-            p {
-              font-family: $helvetica-regular;
-
-              span {
-                color: $red;
-              }
-            }
-
-            .hello {
-              font-family: $soria;
-              font-size: 2rem;
-              line-height: 0.7;
-            }
-          }
-
-          .left {
-            .features {
-              position: relative;
-              white-space: nowrap;
-              width: 260px;
-              margin-top: 10px;
-              overflow: hidden;
-
-              p {
-                position: relative;
-                margin: 0px;
-                padding-right: 3px;
-                font-size: 0.8rem;
-                text-transform: uppercase;
-                color: $dark;
-                font-family: $helvetica-medium;
-
-                &:nth-of-type(2) {
-                  position: absolute;
-                  left: 100%;
-                  top: 0;
-                }
-              }
-            }
+            width: 46%;
           }
 
           .right {
-            margin-top: 30px;
-            p {
-              font-size: 1rem;
-              color: $dark;
-            }
+            margin-top: 35px;
           }
         }
 
         .bio-container {
-          width: 600px;
+          margin: 0;
+          margin-top: 20px;
+          border-top: 1px solid $dark;
+          padding: 20px;
+          width: auto;
 
           ul {
-            list-style: disc;
-            border-top: 1px solid $dark;
-            padding-top: 20px;
-
             li {
               font-size: 1rem;
-              text-transform: lowercase;
-              color: $darkBlue;
             }
           }
         }
       }
-    }
 
-    .star-container {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-
-      .star {
-        width: 800px;
-        height: 800px;
-        fill: $green;
-        position: absolute;
+      .sahil-mask-container {
+        position: relative;
+        margin: 0;
+        width: auto;
+        height: fit-content;
         top: 0;
-        left: -400px;
 
-        animation: rotate 50s linear infinite forwards;
-
-        @keyframes rotate {
-          0% {
-            transform: rotate(0);
-          }
-
-          100% {
-            transform: rotate(360deg);
-          }
+        .img-container {
+          width: 360px;
+          height: 360px;
         }
       }
     }
   }
+}
+
+@media screen and (min-width: 1280px) {
 }
