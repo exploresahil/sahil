@@ -1,7 +1,7 @@
 "use client";
 
 import { MouseParallax } from "react-just-parallax";
-import { useRef, useLayoutEffect, useState } from "react";
+import { useRef, useLayoutEffect, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "@emailjs/browser";
@@ -16,6 +16,23 @@ const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const playVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    };
+
+    // Add event listener for user interaction (e.g., button click)
+    document.addEventListener("click", playVideo);
+
+    return () => {
+      // Clean up event listener when component is unmounted
+      document.removeEventListener("click", playVideo);
+    };
+  }, []);
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -80,7 +97,8 @@ const Contact = () => {
       <div className="headline">
         <h2 ref={textRef}>
           let"s work together • let"s work together • let"s work together •
-          let"s work together •
+          let"s work together • let"s work together • let"s work together •
+          let"s work together • let"s work together • let"s work together •
         </h2>
       </div>
       <div className="form-main">
@@ -155,7 +173,14 @@ const Contact = () => {
             enableOnTouchDevice
             strength={0.05}
           >
-            <video autoPlay loop muted>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              ref={videoRef}
+            >
               <source src="/images/assets/crystal-animation.webm" />
             </video>
           </MouseParallax>

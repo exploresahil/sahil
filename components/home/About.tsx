@@ -69,6 +69,7 @@ const About = () => {
             className="bio-container"
             data-aos="fade-up"
             data-aos-easing="ease-in-out"
+            data-aos-offset="-20"
           >
             <ul>
               <li>HTML | CSS | JS | REACT | NEXT | SANITY</li>

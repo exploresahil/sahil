@@ -43,6 +43,7 @@
 
         .right {
           font-size: 1.2rem;
+          line-height: 1.2;
         }
       }
 
@@ -103,7 +104,7 @@
         }
 
         .bio-container {
-          margin-top: 800px;
+          margin-top: 900px;
 
           ul {
             li {
@@ -186,4 +187,66 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .about-container {
+    margin: 0;
+    height: 100vh;
+    padding: 0 8vw;
+
+    .sahil-info-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .info-container {
+        width: auto;
+        width: 50vw;
+
+        .info-top {
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 20px;
+
+          .info {
+            width: 46%;
+          }
+
+          .left {
+            font-size: 1.8rem;
+          }
+
+          .right {
+            margin-top: 35px;
+          }
+        }
+
+        .bio-container {
+          margin: 0;
+          margin-top: 20px;
+          border-top: 1px solid $dark;
+          padding: 20px;
+          width: auto;
+          position: relative;
+
+          ul {
+            li {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .sahil-mask-container {
+        position: relative;
+        margin: 0;
+        width: auto;
+        height: fit-content;
+        top: 0;
+
+        .img-container {
+          width: 400px;
+          height: 400px;
+        }
+      }
+    }
+  }
 }
