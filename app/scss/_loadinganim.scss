@@ -31,17 +31,17 @@
     }
 
     &:nth-of-type(2) {
-      animation: scaleOne 1s ease-in-out infinite forwards;
+      animation: scaleOne 1s ease-in-out 500ms infinite forwards;
 
       @keyframes scaleOne {
         0% {
-          transform: scale(1.2);
-        }
-        50% {
           transform: scale(1);
         }
-        100% {
+        50% {
           transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
         }
       }
     }
