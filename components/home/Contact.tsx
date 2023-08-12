@@ -12,27 +12,14 @@ import Img from "../default/Img";
 import Star from "../icons/Star";
 import LoadingAnim from "../default/LoadingAnim";
 
+const Crystal = dynamic(() => import("../crystal/Crystal"), {
+  ssr: false,
+});
+
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-
-  useEffect(() => {
-    const playVideo = () => {
-      if (videoRef.current) {
-        videoRef.current.play();
-      }
-    };
-
-    // Add event listener for user interaction (e.g., button click)
-    document.addEventListener("click", playVideo);
-
-    return () => {
-      // Clean up event listener when component is unmounted
-      document.removeEventListener("click", playVideo);
-    };
-  }, []);
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -173,16 +160,7 @@ const Contact = () => {
             enableOnTouchDevice
             strength={0.05}
           >
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              ref={videoRef}
-            >
-              <source src="/images/assets/crystal-animation.webm" />
-            </video>
+            <Crystal />
           </MouseParallax>
           <div className="clouds-container">
             <Img src={clouds} alt="image of abstract pink clouds" />
