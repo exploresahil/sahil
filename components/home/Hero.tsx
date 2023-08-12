@@ -37,7 +37,12 @@ const Hero = () => {
   return (
     <section className="hero-container">
       <div className="container">
-        <div className="headline" data-scroll data-scroll-speed="0.2">
+        <div
+          className="headline"
+          data-scroll
+          data-scroll-speed="0.2"
+          data-enable-touch-speed
+        >
           <div className="line-first">
             <p className="textOne">I Craft</p>
             <p className="textOne">Digital</p>

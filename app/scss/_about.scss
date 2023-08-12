@@ -1,5 +1,129 @@
 @use "./variables" as *;
 
+.about-container {
+  width: 100vw;
+  padding: 0 4vw;
+  margin: 50px 0;
+
+  .sahil-info-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .info-container {
+      .info-top {
+        display: flex;
+        flex-direction: column;
+
+        .info {
+          color: $darkBlue;
+        }
+
+        .left {
+          font-size: 1.8rem;
+
+          .hello {
+            font-family: $soria;
+            font-size: 2.2rem;
+            line-height: 0.8;
+          }
+
+          .features {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin: 10px 0;
+            color: $dark;
+          }
+
+          span {
+            color: $red;
+          }
+        }
+
+        .right {
+          font-size: 1.2rem;
+        }
+      }
+
+      .bio-container {
+        margin-top: 420px;
+        color: $darkBlue;
+        padding-left: 10px;
+
+        ul {
+          list-style: disc;
+
+          li {
+            font-size: 0.9rem;
+            font-family: $helvetica-medium;
+            text-transform: uppercase;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+
+    .sahil-mask-container {
+      position: absolute;
+      top: 280px;
+      width: calc(100vw - 6vw);
+      height: calc(100vw - 6vw);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .img-container {
+        position: relative;
+        width: 90%;
+        height: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) and (orientation: portrait) {
+  .about-container {
+    margin: 100px 0;
+
+    .sahil-info-container {
+      .info-container {
+        .info-top {
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .info {
+            width: 48%;
+          }
+
+          .right {
+            margin-top: 35px;
+          }
+        }
+
+        .bio-container {
+          margin-top: 900px;
+
+          ul {
+            li {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .sahil-mask-container {
+        top: 150px;
+
+        .img-container {
+          width: 80%;
+          height: 80%;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .about-container {
     width: 100vw;

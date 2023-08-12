@@ -14,10 +14,7 @@ import "aos/dist/aos.css";
 const About = () => {
   useEffect(() => {
     AOS.init({
-      disable: function () {
-        var maxWidth = 1250;
-        return window.innerWidth < maxWidth;
-      },
+      disable: "mobile",
     });
   }, []);
 
@@ -71,7 +68,7 @@ const About = () => {
             data-aos-easing="ease-in-out"
           >
             <ul>
-              <li>HTML | CSS | JS | REACT | NEXT</li>
+              <li>HTML | CSS | JS | REACT | NEXT | SANITY</li>
               <li>
                 Adobe XD | Adobe Illustrator | Adobe Lightroom | Adobe Photoshop
                 | Adobe Premiere Pro | Adobe After Effects | Adobe Dimension
