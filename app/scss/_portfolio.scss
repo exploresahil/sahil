@@ -4,6 +4,7 @@
   width: 100vw;
   height: auto;
   padding: 20px;
+  margin-bottom: 20px;
 
   .portfolio-title {
     display: flex;
@@ -113,6 +114,7 @@
 @media screen and (min-width: 1024px) and (max-width: 1367px) and (orientation: landscape) {
   .portfolio-container {
     height: auto;
+    margin-bottom: 60px;
     padding: 0 8vw;
     .portfolio-title {
       h3 {
@@ -154,6 +156,8 @@
   .portfolio-container {
     height: auto;
     padding: 0 8vw;
+    margin-bottom: 80px;
+
     .portfolio-title {
       h3 {
         font-size: 4rem;

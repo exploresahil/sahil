@@ -2,7 +2,6 @@
 
 .portfolio-nav-container {
   width: 100vw;
-
   border-top: 1px solid $dark;
   border-bottom: 1px solid $dark;
   padding: 10px 6vw;
@@ -17,6 +16,7 @@
     gap: 10px;
 
     h3 {
+      width: min-content;
       color: $dark;
       line-height: 1;
       font-size: 0.8rem;
@@ -54,6 +54,7 @@
       h3 {
         color: $dark;
         font-size: 1.2rem;
+        width: fit-content;
       }
 
       svg {
