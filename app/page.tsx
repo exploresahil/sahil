@@ -18,7 +18,6 @@ export default function Home() {
     })();
     setTimeout(() => {
       setIsLoading(false);
-      document.body.style.cursor = "default";
       window.scrollTo(0, 0);
     }, 2000);
   }, []);

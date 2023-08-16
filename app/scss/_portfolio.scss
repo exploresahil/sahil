@@ -2,42 +2,193 @@
 
 .portfolio-container {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   padding: 20px;
 
-  .container {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: $offLight;
+  .portfolio-title {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 20px 0;
 
     h3 {
       font-family: $soria;
-      font-size: 5rem;
-      line-height: 1;
+      font-weight: 100;
+      font-size: 1.5rem;
     }
-    p {
-      font-size: 1.2rem;
+
+    a {
+      color: $darkBlue;
     }
-    .loading-animation {
-      margin-top: 20px;
-      height: auto;
+  }
+
+  .grid-container {
+    width: 100%;
+    height: 700px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    .card {
+      background-color: $offLight;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      transition: background-color 200ms ease-in-out;
+
+      .number {
+        font-family: $soria;
+        position: absolute;
+        font-size: 10rem;
+        color: $darkBlue;
+        top: 0;
+        left: -25%;
+
+        transition: all 200ms ease-in-out;
+      }
+
+      .title {
+        position: absolute;
+        bottom: 0;
+        padding: 10px;
+        color: $dark;
+
+        transition: color 200ms ease-in-out;
+      }
+
+      &:hover {
+        background-color: $dark;
+        transition: background-color 300ms ease-in-out;
+
+        .number {
+          color: $light;
+          left: -15%;
+
+          transition: all 300ms ease-in-out;
+        }
+
+        .title {
+          color: $green;
+
+          transition: color 300ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) and (orientation: portrait) {
+  .portfolio-container {
+    height: auto;
+    .portfolio-title {
+      h3 {
+        font-size: 3rem;
+      }
+
+      a {
+        font-size: 2rem;
+      }
+    }
+
+    .grid-container {
+      height: 600px;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .card {
+        .number {
+          font-size: 15rem;
+          top: -30px;
+          left: -30%;
+        }
+
+        .title {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1367px) and (orientation: landscape) {
+  .portfolio-container {
+    height: auto;
+    padding: 0 8vw;
+    .portfolio-title {
+      h3 {
+        font-size: 3rem;
+      }
+
+      a {
+        font-size: 2rem;
+      }
+    }
+
+    .grid-container {
+      height: 600px;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .card {
+        .number {
+          font-size: 15rem;
+          top: -20px;
+          left: -16%;
+        }
+
+        .title {
+          padding: 20px;
+          font-size: 1.6rem;
+        }
+
+        &:hover {
+          .number {
+            left: -10%;
+          }
+        }
+      }
     }
   }
 }
 
 @media screen and (min-width: 1280px) {
   .portfolio-container {
-    .container {
+    height: auto;
+    padding: 0 8vw;
+    .portfolio-title {
       h3 {
-        font-size: 10rem;
+        font-size: 4rem;
       }
-      p {
-        font-size: 2rem;
+
+      a {
+        font-size: 1.2rem;
+
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+
+    .grid-container {
+      height: 600px;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .card {
+        .number {
+          font-size: 15rem;
+          top: -20px;
+          left: -16%;
+        }
+
+        .title {
+          padding: 20px;
+          font-size: 1.4rem;
+        }
+
+        &:hover {
+          .number {
+            left: -10%;
+          }
+        }
       }
     }
   }

@@ -11,6 +11,7 @@ import clouds from "@/public/images/assets/pink-clouds.png";
 import Img from "../default/Img";
 import Star from "../icons/Star";
 import LoadingAnim from "../default/LoadingAnim";
+import GsapMagnetic from "../default/GsapMagnetic";
 
 const Crystal = dynamic(() => import("../crystal/Crystal"), {
   ssr: false,
@@ -121,22 +122,24 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            <div className="button-container">
-              <button
-                type="submit"
-                className={isLoading ? "loading-button" : ""}
-              >
-                {isLoading ? (
-                  <LoadingAnim />
-                ) : isEmailSent ? (
-                  <>
-                    Sent! <TiTick />
-                  </>
-                ) : (
-                  "Send"
-                )}
-              </button>
-            </div>
+            <GsapMagnetic>
+              <div className="button-container">
+                <button
+                  type="submit"
+                  className={isLoading ? "loading-button" : ""}
+                >
+                  {isLoading ? (
+                    <LoadingAnim />
+                  ) : isEmailSent ? (
+                    <>
+                      Sent! <TiTick />
+                    </>
+                  ) : (
+                    "Send"
+                  )}
+                </button>
+              </div>
+            </GsapMagnetic>
           </form>
           <MouseParallax
             isAbsolutelyPositioned

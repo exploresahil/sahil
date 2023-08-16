@@ -1,13 +1,14 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Link as ScrollTo } from "react-scroll";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <footer>
       <ScrollTo to="header" spy={true} smooth={true}>
-        <h4>sahil satpute</h4>
+        <h4 onClick={() => router.push("/")}>sahil satpute</h4>
       </ScrollTo>
       <p>
         <Link href="mailto:explore.sahil@outlook.com">
