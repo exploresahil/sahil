@@ -1,0 +1,311 @@
+@use "../../app/scss/variables" as *;
+
+#about {
+  max-width: 100vw;
+  padding: 0 6vw;
+  position: relative;
+  overflow: hidden;
+
+  .sahil-img-container {
+    margin: 80px 0 20px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    .img-container {
+      position: relative;
+      width: 400px;
+      height: 300px;
+      z-index: 1;
+    }
+
+    .icon {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      z-index: 0;
+    }
+
+    .camera-container {
+      left: 10%;
+      top: 0;
+    }
+
+    .puzzle-container {
+      left: 10%;
+      top: 15%;
+    }
+
+    .paint-container {
+      left: auto;
+      right: 10%;
+      top: 0;
+    }
+
+    .coffee-container {
+      left: auto;
+      right: 10%;
+      top: 14%;
+    }
+  }
+
+  .title-container {
+    .hello-container {
+      font-family: $helvetica-light;
+      font-size: 3.4rem;
+      line-height: 1.2;
+      mix-blend-mode: difference;
+
+      .hello {
+        font-family: $soria;
+        font-weight: 100;
+        line-height: 0.8;
+      }
+
+      .name {
+        color: $pink;
+      }
+    }
+  }
+
+  .designer-container {
+    mix-blend-mode: difference;
+    .features {
+      margin: 10px 0;
+
+      p {
+        font-size: 1.2rem;
+        margin: 0 2px;
+      }
+    }
+
+    h4 {
+      font-family: $helvetica-light;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin-bottom: 50px;
+
+      span {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) and (orientation: portrait) {
+  #about {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 50px 6vw;
+
+    .sahil-img-container {
+      position: relative;
+
+      .img-container {
+        position: relative;
+        width: 400px;
+        height: 397.6px;
+        z-index: 1;
+      }
+
+      .camera-container {
+        left: 14%;
+        top: 10%;
+      }
+
+      .puzzle-container {
+        left: 2%;
+        top: 50%;
+      }
+
+      .paint-container {
+        right: 14%;
+        top: 10%;
+      }
+
+      .coffee-container {
+        right: 2%;
+        top: 50%;
+      }
+    }
+
+    .text-container {
+      display: flex;
+      justify-content: space-between;
+
+      .title-container {
+        width: 45%;
+
+        .hello-container {
+          font-size: 3.2rem;
+        }
+      }
+
+      .designer-container {
+        width: 45%;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .features {
+          margin-top: 20px;
+          width: auto;
+        }
+
+        h4 {
+          margin: 0;
+          font-size: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1367px) and (orientation: landscape) {
+  #about {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 50px 6vw;
+
+    .sahil-img-container {
+      margin-top: -60px;
+      position: relative;
+
+      .img-container {
+        position: relative;
+        width: 600px;
+        height: 596.4px;
+        z-index: 1;
+      }
+
+      .icon {
+        width: 200px;
+        height: 200px;
+      }
+
+      .camera-container {
+        left: 14%;
+        top: 25%;
+      }
+
+      .puzzle-container {
+        left: 2%;
+        top: 60%;
+      }
+
+      .paint-container {
+        right: 14%;
+        top: 25%;
+      }
+
+      .coffee-container {
+        right: 2%;
+        top: 60%;
+      }
+    }
+
+    .text-container {
+      display: flex;
+      justify-content: space-between;
+
+      .title-container {
+        width: 40%;
+
+        .hello-container {
+          font-size: 4.2rem;
+        }
+      }
+
+      .designer-container {
+        width: 36%;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .features {
+          margin-top: 20px;
+          width: auto;
+        }
+
+        h4 {
+          margin: 0;
+          font-size: 3.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #about {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 6vw;
+    align-items: center;
+
+    .sahil-img-container {
+      margin-top: -60px;
+      position: relative;
+
+      .img-container {
+        position: relative;
+        width: 500px;
+        height: 497px;
+        z-index: 1;
+      }
+
+      .icon {
+        width: 160px;
+        height: 160px;
+      }
+
+      .camera-container {
+        left: 18%;
+        top: 25%;
+      }
+
+      .puzzle-container {
+        left: 4%;
+        top: 60%;
+      }
+
+      .paint-container {
+        right: 18%;
+        top: 25%;
+      }
+
+      .coffee-container {
+        right: 4%;
+        top: 60%;
+      }
+    }
+
+    .text-container {
+      display: flex;
+      justify-content: space-between;
+
+      .title-container {
+        width: 30%;
+
+        .hello-container {
+          font-size: 4.2rem;
+        }
+      }
+
+      .designer-container {
+        width: 30%;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .features {
+          margin-top: 20px;
+          width: auto;
+        }
+
+        h4 {
+          margin: 0;
+          font-size: 3.6rem;
+        }
+      }
+    }
+  }
+}
