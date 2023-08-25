@@ -30,21 +30,24 @@ const Footer = ({ onMouseEnter, onMouseLeave }: any) => {
       </p>
       <div className="social">
         <Link
-          href=""
+          href="https://www.linkedin.com/in/exploresahil/"
+          target="_blank"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
           <FaLinkedinIn />
         </Link>
         <Link
-          href=""
+          href="https://github.com/exploresahil"
+          target="_blank"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
           <BsGithub />
         </Link>
         <Link
-          href=""
+          href="https://www.behance.net/exploresahil"
+          target="_blank"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >

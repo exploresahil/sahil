@@ -81,108 +81,24 @@ const Tools = () => {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.fromTo(
-      skillsRef.current,
-      {
-        opacity: 0,
-        y: 400,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: toolsRef.current,
-          scrub: 0.2,
-          //markers: true,
-          start: "top bottom",
-          end: "200px center",
-        },
-      }
-    );
+    let mm = gsap.matchMedia();
 
-    gsap.fromTo(
-      rocketListRef.current,
-      {
-        scale: 3,
-        opacity: 0,
-        rotateY: 45,
-        y: 200,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        rotateY: 0,
-        y: 0,
-        scrollTrigger: {
-          trigger: toolsRef.current,
-          scrub: 0.2,
-          //markers: true,
-          start: "top bottom",
-          end: "center center",
+    mm.add("(min-width: 1280px)", () => {
+      gsap.fromTo(
+        toolsRef.current,
+        {
+          height: 0,
         },
-      }
-    );
-
-    gsap.fromTo(
-      rockertRef.current,
-      {
-        x: 200,
-      },
-      {
-        x: 1,
-
-        scrollTrigger: {
-          trigger: toolsRef.current,
-          scrub: 0.2,
-          //markers: true,
-          start: "top bottom",
-          end: "200px center",
-        },
-      }
-    );
-
-    gsap.fromTo(
-      brushListRef.current,
-      {
-        scale: 3,
-        opacity: 0,
-        rotateY: -45,
-        y: 200,
-        x: 400,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        rotateY: 0,
-        y: 0,
-        x: 0,
-        scrollTrigger: {
-          trigger: toolsRef.current,
-          scrub: 0.2,
-          //markers: true,
-          start: "top bottom",
-          end: "center center",
-        },
-      }
-    );
-    gsap.fromTo(
-      brushRef.current,
-      {
-        x: -400,
-      },
-      {
-        x: 1,
-
-        scrollTrigger: {
-          trigger: toolsRef.current,
-          scrub: 0.2,
-          //markers: true,
-          start: "top bottom",
-          end: "200px center",
-        },
-      }
-    );
+        {
+          height: "1000px",
+          scrollTrigger: {
+            trigger: toolsRef.current,
+            //markers: true,
+            scrub: true,
+          },
+        }
+      );
+    });
   }, []);
 
   return (
