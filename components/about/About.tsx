@@ -8,7 +8,7 @@ import "./about.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import sahil from "@/public/assets/png/sahil.png";
+import sahil from "@/public/assets/png/sahil.jpg";
 import camera from "@/public/assets/png/camera-dynamic-gradient.png";
 import puzzle from "@/public/assets/png/puzzle-dynamic-gradient.png";
 import paint from "@/public/assets/png/paint-kit-dynamic-gradient.png";
