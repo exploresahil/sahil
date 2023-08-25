@@ -1,15 +1,18 @@
 @use "../../app/scss/variables" as *;
 
 #tools {
-  width: 100vw;
-  padding: 100px 6vw;
+  height: 1000px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  overflow: hidden;
-  background-color: $dark;
+  .skills {
+    width: 100vw;
+    padding: 100px 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    background-color: $dark;
+  }
 
   h4 {
     font-family: $soria;
@@ -106,6 +109,16 @@
 @media screen and (min-width: 768px) and (max-width: 1025px) and (orientation: portrait) {
   #tools {
     gap: 80px;
+    .skills {
+      width: 100vw;
+      padding: 100px 6vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      overflow: hidden;
+      background-color: $dark;
+    }
 
     h4 {
       font-size: 4rem;
@@ -150,6 +163,16 @@
   #tools {
     gap: 80px;
 
+    .skills {
+      width: 100vw;
+      padding: 100px 6vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      overflow: hidden;
+      background-color: $dark;
+    }
     h4 {
       font-size: 4rem;
     }
@@ -197,11 +220,14 @@
 
 @media screen and (min-width: 1280px) {
   #tools {
-    height: 100vh;
-    gap: 80px;
-    margin: 0;
-    padding: 0 6vw;
-    justify-content: center;
+    height: 1000px;
+
+    .skills {
+      gap: 80px;
+      margin: 0;
+      padding: 0 6vw;
+      justify-content: center;
+    }
 
     h4 {
       font-size: 8rem;

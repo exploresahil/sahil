@@ -102,40 +102,42 @@ const Tools = () => {
   }, []);
 
   return (
-    <section id="tools" ref={toolsRef}>
-      <h4 ref={skillsRef}>~SKILLS~</h4>
-      <div className="skills-container">
-        <div className="rocket-container">
-          <div className="img-container" ref={rockertRef}>
-            <Image fill src={rocket} alt="gradient rocket" sizes="100" />
+    <section id="tools">
+      <div className="skills" ref={toolsRef}>
+        <h4 ref={skillsRef}>~SKILLS~</h4>
+        <div className="skills-container">
+          <div className="rocket-container">
+            <div className="img-container" ref={rockertRef}>
+              <Image fill src={rocket} alt="gradient rocket" sizes="100" />
+            </div>
+            <ul ref={rocketListRef}>
+              {ricketList.map((item, index) => (
+                <li
+                  key={index}
+                  onMouseEnter={handleRocketMouseEnter}
+                  onMouseLeave={handleRocketMouseLeave}
+                >
+                  {item.title}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul ref={rocketListRef}>
-            {ricketList.map((item, index) => (
-              <li
-                key={index}
-                onMouseEnter={handleRocketMouseEnter}
-                onMouseLeave={handleRocketMouseLeave}
-              >
-                {item.title}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="brush-container">
-          <div className="img-container" ref={brushRef}>
-            <Image fill src={brush} alt="gradient brush" sizes="100" />
+          <div className="brush-container">
+            <div className="img-container" ref={brushRef}>
+              <Image fill src={brush} alt="gradient brush" sizes="100" />
+            </div>
+            <ul ref={brushListRef}>
+              {brushList.map((item, index) => (
+                <li
+                  key={index}
+                  onMouseEnter={handleBrushMouseEnter}
+                  onMouseLeave={handleBrushMouseLeave}
+                >
+                  {item.title}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul ref={brushListRef}>
-            {brushList.map((item, index) => (
-              <li
-                key={index}
-                onMouseEnter={handleBrushMouseEnter}
-                onMouseLeave={handleBrushMouseLeave}
-              >
-                {item.title}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>
