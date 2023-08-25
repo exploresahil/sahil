@@ -36,15 +36,14 @@
 
         img {
           object-fit: cover;
-          opacity: 0.25;
-          z-index: 0;
-          mix-blend-mode: difference;
+          opacity: 0.5;
+          z-index: -1;
         }
       }
     }
 
     .hello-container {
-      width: 100vw;
+      width: fit-content;
       padding: 0 6vw;
       position: relative;
       z-index: 1;
@@ -64,7 +63,7 @@
     }
 
     .designer-container {
-      width: 100vw;
+      width: fit-content;
       padding: 0 6vw;
       position: relative;
       z-index: 1;
@@ -119,7 +118,7 @@
       }
 
       .marquee-container {
-        bottom: 20px;
+        bottom: 2%;
       }
     }
   }

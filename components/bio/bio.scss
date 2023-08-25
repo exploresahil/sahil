@@ -12,6 +12,9 @@
   line-height: 1.2;
   background-color: $darkBlue;
   mix-blend-mode: difference;
+
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1025px) and (orientation: portrait) {
@@ -36,5 +39,6 @@
     font-size: 5rem;
     padding: 200px 6vw;
     text-align: center;
+    height: 120vh;
   }
 }

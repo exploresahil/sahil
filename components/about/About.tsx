@@ -16,15 +16,10 @@ import coffee from "@/public/assets/png/tea-cup-dynamic-gradient.png";
 import { useLayoutEffect, useRef, useState } from "react";
 
 const About = ({ onMouseEnter, onMouseLeave }: any) => {
-  const helloRef = useRef(null);
   const aboutRef = useRef(null);
   const imageContainerRef = useRef(null);
   const sahilRef = useRef(null);
   const infoRef = useRef(null);
-  const cameraRef = useRef(null);
-  const puzzleRef = useRef(null);
-  const paintRef = useRef(null);
-  const coffeeRef = useRef(null);
 
   useLayoutEffect(() => {
     AOS.init();
@@ -75,7 +70,16 @@ const About = ({ onMouseEnter, onMouseLeave }: any) => {
             <Image fill src={sahil} alt="gradient star" sizes="100" />
           </div>
         </div>
-        <h4 className="hello-container" data-aos="fade-up">
+        <h4
+          className="hello-container"
+          data-aos="fade-up"
+          onMouseEnter={() => {
+            onMouseEnter();
+          }}
+          onMouseLeave={() => {
+            onMouseLeave();
+          }}
+        >
           <span className="hello">
             hello,
             <br />
@@ -83,7 +87,16 @@ const About = ({ onMouseEnter, onMouseLeave }: any) => {
           my name is <br />
           <span className="pink">sahil satpute</span>
         </h4>
-        <h4 className="designer-container" data-aos="fade-up">
+        <h4
+          className="designer-container"
+          data-aos="fade-up"
+          onMouseEnter={() => {
+            onMouseEnter();
+          }}
+          onMouseLeave={() => {
+            onMouseLeave();
+          }}
+        >
           i am a <span className="yellow">fullstack designer</span>
         </h4>
         <Marquee>
