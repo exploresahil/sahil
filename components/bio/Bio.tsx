@@ -14,47 +14,43 @@ const Bio = ({ onMouseEnter, onMouseLeave }: any) => {
     gsap.registerPlugin(ScrollTrigger);
     const bio = new SplitType(bioRef.current, { types: "words" });
 
-    let mm = gsap.matchMedia();
-
-    mm.add("(min-width: 1280px)", () => {
-      gsap.fromTo(
-        bio.words,
-        {
-          y: 20,
-          opacity: 0,
+    gsap.fromTo(
+      bio.words,
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.05,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: bioRef.current,
+          //markers: true,
+          scrub: 0.2,
+          start: "center bottom",
+          end: "center 55%",
         },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.05,
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: bioRef.current,
-            //markers: true,
-            scrub: 0.2,
-            start: "center bottom",
-            end: "center 55%",
-          },
-        }
-      );
-      gsap.fromTo(
-        bioMainRef.current,
-        {
-          backgroundColor: "#0c0c0c",
+      }
+    );
+    gsap.fromTo(
+      bioMainRef.current,
+      {
+        backgroundColor: "#0c0c0c",
+      },
+      {
+        backgroundColor: "#0a369d",
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: bioMainRef.current,
+          //markers: true,
+          scrub: 0.2,
+          start: "top bottom",
+          end: "center center",
         },
-        {
-          backgroundColor: "#0a369d",
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: bioMainRef.current,
-            //markers: true,
-            scrub: 0.2,
-            start: "top bottom",
-            end: "center center",
-          },
-        }
-      );
-    });
+      }
+    );
   }, []);
 
   const handleEnter = () => {
