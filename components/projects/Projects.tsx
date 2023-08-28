@@ -1,15 +1,13 @@
 import Link from "next/link";
 import "./projects.scss";
 import { motion, useAnimation } from "framer-motion";
-import Image from "next/image";
-import star from "@/public/assets/svg/star.svg";
 
 const projectsList = [
   {
     number: "01",
     title: "Website Sections",
     description: "DESIGN | ANIMATION | NEXT | 2023",
-    href: "/website-sections",
+    href: "/projects/hover-image-slide-effect",
   },
   {
     number: "02",

@@ -8,12 +8,8 @@ import "./about.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import sahil from "@/public/assets/png/sahil.jpg";
-import camera from "@/public/assets/png/camera-dynamic-gradient.png";
-import puzzle from "@/public/assets/png/puzzle-dynamic-gradient.png";
-import paint from "@/public/assets/png/paint-kit-dynamic-gradient.png";
-import coffee from "@/public/assets/png/tea-cup-dynamic-gradient.png";
-import { useLayoutEffect, useRef, useState } from "react";
+import sahil from "@/public/assets/png/sahil_art_land.png";
+import { useLayoutEffect, useRef } from "react";
 
 const About = ({ onMouseEnter, onMouseLeave }: any) => {
   const aboutRef = useRef(null);
@@ -70,35 +66,39 @@ const About = ({ onMouseEnter, onMouseLeave }: any) => {
             <Image fill src={sahil} alt="gradient star" sizes="100" />
           </div>
         </div>
-        <h4
-          className="hello-container"
-          data-aos="fade-up"
-          onMouseEnter={() => {
-            onMouseEnter();
-          }}
-          onMouseLeave={() => {
-            onMouseLeave();
-          }}
-        >
-          <span className="hello">
-            hello,
-            <br />
-          </span>
-          my name is <br />
-          <span className="pink">sahil satpute</span>
-        </h4>
-        <h4
-          className="designer-container"
-          data-aos="fade-up"
-          onMouseEnter={() => {
-            onMouseEnter();
-          }}
-          onMouseLeave={() => {
-            onMouseLeave();
-          }}
-        >
-          i am a <span className="yellow">fullstack designer</span>
-        </h4>
+        <div className="text">
+          <h4
+            className="hello-container"
+            data-aos="fade-up"
+            onMouseEnter={() => {
+              onMouseEnter();
+            }}
+            onMouseLeave={() => {
+              onMouseLeave();
+            }}
+          >
+            <span className="hello">
+              hello,
+              <br />
+            </span>
+            my name is <br />
+            <span className="pink">sahil satpute</span>
+          </h4>
+
+          <h4
+            className="designer-container"
+            data-aos="fade-up"
+            onMouseEnter={() => {
+              onMouseEnter();
+            }}
+            onMouseLeave={() => {
+              onMouseLeave();
+            }}
+          >
+            i am a <br />
+            <span className="yellow">fullstack designer</span>
+          </h4>
+        </div>
         <Marquee>
           <p>
             UI design • Front-End • React • Next • Gsap • Locomotive • Web

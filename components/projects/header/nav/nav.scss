@@ -1,0 +1,11 @@
+@use "../../../../app/scss/variables" as *;
+
+select {
+  background: none;
+  padding: 5px 10px;
+  color: $light;
+
+  option {
+    background-color: $dark;
+  }
+}
