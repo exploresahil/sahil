@@ -1,5 +1,5 @@
 import "./nav.scss";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const NavItems = [
   {
@@ -7,29 +7,30 @@ const NavItems = [
     href: "/projects/hover-image-slide-effect",
   },
   {
-    title: "projects",
+    title: "Pixel Cursor Move",
+    href: "/projects/pixel-cursor-move",
+  },
+  {
+    title: "Projects",
     href: "/projects",
   },
   {
     title: "Hover Image Slide Animation",
-    href: "/projects/hover-image-slide-effect",
+    href: "/projects",
   },
   {
     title: "Hover Image Slide Animation",
-    href: "/projects/hover-image-slide-effect",
+    href: "/projects",
   },
   {
     title: "Hover Image Slide Animation",
-    href: "/projects/hover-image-slide-effect",
-  },
-  {
-    title: "Hover Image Slide Animation",
-    href: "/projects/hover-image-slide-effect",
+    href: "/projects",
   },
 ];
 
 const Nav = () => {
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleOptionChange = (event: any) => {
     const selectedOption = event.target.value;
@@ -38,13 +39,14 @@ const Nav = () => {
     );
 
     if (selectedNavItem) {
-      router.push(selectedNavItem.href);
+      // Use router.push to navigate and set the selected value in the select element
+      router.push(selectedNavItem.href, undefined);
     }
   };
   return (
     <select onChange={handleOptionChange}>
       {NavItems.map((nav, index) => (
-        <option key={index} value={nav.title}>
+        <option key={index} value={nav.title} selected={pathname === nav.href}>
           {nav.title}
         </option>
       ))}

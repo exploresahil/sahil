@@ -71,6 +71,24 @@
   font-style: normal;
 }
 
+//*--- cousine --->
+
+@font-face {
+  font-family: "cousineregular";
+  src: url("./cousine/cousine-regular-webfont.woff2") format("woff2"),
+    url("./cousine/cousine-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "cousinebold";
+  src: url("./cousine/cousine-bold-webfont.woff2") format("woff2"),
+    url("./cousine/cousine-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 //*---- font variables ---->
 
 //*--- helvetica --->
@@ -83,6 +101,11 @@ $helvetica-light: "Helvetica Now Display Light", sans-serif;
 //*--- soriasoria --->
 
 $soria: "soriasoria", serif;
+
+//*--- cousine --->
+
+$cousine-regular: "cousineregular", monospace;
+$cousine-bold: "cousinebold", monospace;
 
 //*---- color variables ---->
 

@@ -10,7 +10,10 @@ const Header = () => {
   const pathname = usePathname();
 
   // Define an array of pathnames where you want to render the nav element
-  const allowedPathnames = ["/projects/hover-image-slide-effect"];
+  const allowedPathnames = [
+    "/projects/pixel-cursor-move",
+    "/projects/hover-image-slide-effect",
+  ];
 
   // Check if the current pathname is in the allowed pathnames
   const isAllowedPathname = allowedPathnames.includes(pathname);
