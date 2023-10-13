@@ -1,0 +1,21 @@
+@use "../../../app/scss/variables" as *;
+
+.projects-header {
+  width: 100vw;
+  height: 60px;
+  padding: 0 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h2 {
+      font-family: $helvetica-regular;
+      font-size: 1rem;
+    }
+  }
+}
