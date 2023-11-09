@@ -43,10 +43,11 @@ const Nav = () => {
       router.push(selectedNavItem.href, undefined);
     }
   };
+
   return (
-    <select onChange={handleOptionChange}>
+    <select onChange={handleOptionChange} value={pathname}>
       {NavItems.map((nav, index) => (
-        <option key={index} value={nav.title} selected={pathname === nav.href}>
+        <option key={index} value={nav.href}>
           {nav.title}
         </option>
       ))}

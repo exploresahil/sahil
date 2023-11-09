@@ -4,7 +4,7 @@ import "./popupMenu.scss";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { dropdownMenuItems, popupMenu } from "@/utils/anim";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import { useMediaQuery } from "react-responsive";
 
 const menuItems = [
   {
@@ -29,16 +29,14 @@ const page = () => {
     setIsActive(!isActive);
   };
 
-  const isMobile = useMediaQuery("only screen and (max-width: 820px)");
-  const isTablet = useMediaQuery(
-    "only screen and (min-width: 821px) and (max-width: 1025px)"
-  );
+  const isTablet = useMediaQuery({ minWidth: 820, maxWidth: 1024 });
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
 
-  const responsiveVariants = isMobile
-    ? popupMenu.responsive.mobile
-    : isTablet
+  const responsiveVariants = isTablet
     ? popupMenu.responsive.tablet
-    : popupMenu.responsive.desktop;
+    : isDesktop
+    ? popupMenu.responsive.desktop
+    : popupMenu.responsive.mobile;
 
   return (
     <section id="popupMenu">
