@@ -11,9 +11,9 @@ const projectsList = [
   },
   {
     number: "02",
-    title: "CURD",
+    title: "CRUD",
     description: "CODE functionality | NEXT | 2023",
-    href: "/curd",
+    href: "/crud",
   },
   {
     number: "03",
@@ -23,8 +23,8 @@ const projectsList = [
   },
   {
     number: "04",
-    title: "Website Section Layouts",
-    description: "DESIGN | GUIDE | NEXT | 2023",
+    title: "E-Commerce",
+    description: "CODE | ANIMATION | NEXT | 2023",
     href: "/website-section-layouts",
   },
 ];

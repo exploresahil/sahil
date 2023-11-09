@@ -13,6 +13,9 @@ const Header = () => {
   const allowedPathnames = [
     "/projects/pixel-cursor-move",
     "/projects/hover-image-slide-effect",
+    "/projects/dropdown-menu",
+    "/projects/slide-menu",
+    "/projects/popup-menu",
   ];
 
   // Check if the current pathname is in the allowed pathnames

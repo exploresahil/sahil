@@ -1,12 +1,15 @@
 @use "../../../app/scss/variables" as *;
 
 .projects-header {
+  position: relative;
   width: 100vw;
   height: 60px;
   padding: 0 6vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 999;
+  background-color: $dark;
 
   a {
     display: flex;
@@ -14,8 +17,21 @@
     gap: 10px;
 
     h2 {
+      display: none;
       font-family: $helvetica-regular;
       font-size: 1rem;
+    }
+  }
+}
+
+//*---------->> Tablet
+
+@media screen and (min-width: 820px) {
+  .projects-header {
+    a {
+      h2 {
+        display: block;
+      }
     }
   }
 }

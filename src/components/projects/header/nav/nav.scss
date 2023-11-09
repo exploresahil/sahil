@@ -2,10 +2,13 @@
 
 select {
   background: none;
-  padding: 5px 10px;
-  color: $light;
+  padding: 5px 15px;
+  color: $dark;
+  background-color: $light;
+  border: none;
+  border-radius: 20px;
 
   option {
-    background-color: $dark;
+    background-color: $light;
   }
 }

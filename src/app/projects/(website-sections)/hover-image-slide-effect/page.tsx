@@ -1,11 +1,6 @@
 import Image from "next/image";
 import "./imageslide.scss";
 
-/* import rajni from "../../../../public/assets/png/rajni.png";
-import barrie from "../../../public/assets/png/barrie.png";
-import dora from "../../../../public/assets/png/dora.png";
-import estella from "../../../../public/assets/png/estella.png"; */
-
 const page = () => {
   const altText = "image of a person";
 

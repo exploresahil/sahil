@@ -11,16 +11,16 @@ const NavItems = [
     href: "/projects/pixel-cursor-move",
   },
   {
-    title: "Projects",
-    href: "/projects",
+    title: "Dropdown Menu",
+    href: "/projects/dropdown-menu",
   },
   {
-    title: "Hover Image Slide Animation",
-    href: "/projects",
+    title: "Slide Menu",
+    href: "/projects/slide-menu",
   },
   {
-    title: "Hover Image Slide Animation",
-    href: "/projects",
+    title: "Pop-up Menu",
+    href: "/projects/popup-menu",
   },
   {
     title: "Hover Image Slide Animation",
