@@ -34,9 +34,7 @@ const Nav = () => {
 
   const handleOptionChange = (event: any) => {
     const selectedOption = event.target.value;
-    const selectedNavItem = NavItems.find(
-      (nav) => nav.title === selectedOption
-    );
+    const selectedNavItem = NavItems.find((nav) => nav.href === selectedOption);
 
     if (selectedNavItem) {
       // Use router.push to navigate and set the selected value in the select element
