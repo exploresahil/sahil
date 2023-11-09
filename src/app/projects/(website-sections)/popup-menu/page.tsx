@@ -22,12 +22,30 @@ const menuItems = [
 ];
 
 const page = () => {
+  const popupRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const [isActive, setIsActive] = useState(false);
 
   const onButtonClick = () => {
     setIsActive(!isActive);
   };
+
+  useEffect(() => {
+    const dropdownClose = (e: any) => {
+      if (
+        !popupRef.current?.contains(e.target) &&
+        !menuButtonRef.current?.contains(e.target)
+      ) {
+        setIsActive(false);
+      }
+    };
+
+    document.addEventListener("mousedown", dropdownClose);
+
+    return () => {
+      document.removeEventListener("mousedown", dropdownClose);
+    };
+  }, []);
 
   const isTablet = useMediaQuery({ minWidth: 820, maxWidth: 1024 });
   const isDesktop = useMediaQuery({ minWidth: 1025 });
@@ -56,6 +74,7 @@ const page = () => {
               animate="enter"
               exit="exit"
               className="popup-menu"
+              ref={popupRef}
             >
               <motion.h4
                 initial={{ opacity: 0 }}
