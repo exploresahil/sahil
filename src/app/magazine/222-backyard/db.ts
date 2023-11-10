@@ -82,9 +82,8 @@ export const brand = [
       },
 
       {
-        image:
-          "https://i.postimg.cc/xT4JmnCD/304847816-552551086622860-1407013137258579336-n.jpg",
-        desc: "222_backyard's profile picture ✨️🍃🥗 With 222 Backyard completing a year, we decided to amp up the menu for you! Introducing - Mac 'n Cheese!",
+        image: "https://i.postimg.cc/W473dmKz/dsgs.jpg",
+        desc: "✨️🍃🥗 With 222 Backyard completing a year, we decided to amp up the menu for you! Introducing - Mac 'n Cheese!",
       },
       {
         image:
@@ -92,9 +91,8 @@ export const brand = [
         desc: "Crystal Coffee : It looks all shiny and crystal-y, and it has the right amount of caffeine to bring your systems up to speed! Enter the premise of 222 Backyard and enjoy the bubbliness of the drink!",
       },
       {
-        image:
-          "https://i.postimg.cc/rp69SSmk/299605386-451883033561365-4876544319863843380-n.jpg",
-        desc: "222_backyard's profile picture 🍹🍹🍹 Malta Brew : Lemon-y tanginess that matches our espresso shot in an amalgamated drink called Malta Brew! Join us at 222 Backyard and enjoy the zesty deliciousness!. 🍝🍋 ",
+        image: "https://i.postimg.cc/wTRSfq9Q/gdshasfasfs.jpg",
+        desc: "Malta Brew : Lemon-y tanginess that matches our espresso shot in an amalgamated drink called Malta Brew! Join us at 222 Backyard and enjoy the zesty deliciousness!. 🍝🍋 ",
       },
       {
         image:
@@ -126,7 +124,6 @@ export const brand = [
           "https://i.postimg.cc/R0WZzDx7/263782055-446447627005237-2299738531188440826-n.jpg",
         desc: "Something's tingling with the speed of a rocket Oh !! It's your taste buds craving for our Falafel Pita Pockets 😉",
       },
-      
     ],
   },
 ];

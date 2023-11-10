@@ -30,7 +30,7 @@ export const brand = [
         desc: "We have launched new cold brews! All new and creative cold brew beverages, and a lot of options to choose from! / Collective’s Signature / ",
       },
       {
-        image: "https://i.postimg.cc/7hHmKL7M/A7401193-5-Mini.jpg",
+        image: "https://i.postimg.cc/0ydmCvSt/affasfafa.jpg",
         desc: "A delicious collision of tastes, all on one plate : @collectiveblendscafe ‘s Sweet & Savory Platter🍳🥞",
       },
       {
