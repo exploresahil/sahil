@@ -11,38 +11,38 @@ import { useRouter } from "next/navigation";
 const brands = [
   {
     srno: "00-1",
-    title: "three beans",
+    title: "Three Beans",
     cover:
       "https://i.postimg.cc/qM8BGMXF/278528147-1838109503045292-5069646706982681758-n.jpg",
-    desc: "RESEARCH - STRATEGY - DESIGN - DEVELOPMENT - CONTENT",
-    year: "2018 - 2023",
-    link: "#",
+    desc: "PHOTOGRAPHY - RESEARCH - STRATEGY - DESIGN - DEVELOPMENT",
+    year: "2017 - 2022",
+    link: "/magazine/three-beans",
   },
   {
     srno: "00-2",
     title: "Collective Blends",
     cover:
       "https://i.postimg.cc/q7Xrm8y2/321813934-2539267282882867-1065032683129824880-n.jpg",
-    desc: "RESEARCH - STRATEGY - DESIGN - DEVELOPMENT - CONTENT",
+    desc: "PHOTOGRAPHY - RESEARCH - STRATEGY - DESIGN",
     year: "2018 - 2023",
-    link: "#",
+    link: "/magazine/collective-blends",
   },
   {
     srno: "00-3",
     title: "222 Backyard",
     cover: "https://i.postimg.cc/9XwxfBh3/ESA-2331-19-min.jpg",
-    desc: "RESEARCH - STRATEGY - DESIGN - DEVELOPMENT - CONTENT",
+    desc: "PHOTOGRAPHY - RESEARCH - STRATEGY - DESIGN",
     year: "2018 - 2023",
-    link: "#",
+    link: "/magazine/222-backyard",
   },
   {
     srno: "00-4",
     title: "Dessert Bar",
     cover:
       "https://i.postimg.cc/PJbJ3m8C/311725805-470916581659350-115462037486202544-n.jpg",
-    desc: "RESEARCH - STRATEGY - DESIGN - DEVELOPMENT - CONTENT",
+    desc: "PHOTOGRAPHY - RESEARCH - STRATEGY - DESIGN",
     year: "2018 - 2023",
-    link: "#",
+    link: "/magazine/dessert-bar",
   },
 ];
 
@@ -113,6 +113,7 @@ const Hero = () => {
                   alt={brand.title}
                   width={1000}
                   height={1000}
+                  loading="lazy"
                 />
               </div>
               <div className="line" />

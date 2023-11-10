@@ -1,9 +1,12 @@
+import Link from "next/link";
 import "./header.scss";
 
 const Header = () => {
   return (
     <section id="magazineHeader">
-      <h2>Palate Portraits</h2>
+      <Link href="/magazine">
+        Palate Portraits <span>by sahil satpute</span>
+      </Link>
       <p>The Magazine</p>
     </section>
   );

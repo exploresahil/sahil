@@ -13,9 +13,18 @@
   justify-content: space-between;
   z-index: 999;
 
-  h2 {
+  a {
     font-size: 1rem;
     font-family: $helvetica-bold;
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+
+    span {
+      font-family: $helvetica-light;
+      font-size: 0.8rem;
+    }
   }
 
   p {

@@ -4,7 +4,6 @@
   background-color: $light;
 
   width: 100vw;
-  //height: 100vh;
   padding: 0 4vw;
 
   color: $textDark;
@@ -20,6 +19,7 @@
       text-transform: uppercase;
       font-family: $helvetica-light;
       font-size: 2rem;
+      line-height: 1;
     }
 
     p {
@@ -159,12 +159,24 @@
       padding-bottom: 80px;
 
       .brand-card {
+        position: relative;
         .card {
           .brand-title {
             h3 {
               font-size: 1rem;
             }
           }
+        }
+
+        .srno {
+          display: block;
+          color: $textDark;
+          position: absolute;
+          right: -5px;
+          top: 0;
+          font-size: 0.8rem;
+          transform: rotate(-90deg);
+          transform-origin: 100% 0;
         }
       }
     }
