@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "assets.website-files.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "i.postimg.cc",
+        port: "",
+      },
     ],
   },
 };

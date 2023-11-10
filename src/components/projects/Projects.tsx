@@ -29,7 +29,7 @@ const projectsList = [
   },
 ];
 
-const Projects = ({ onMouseEnter, onMouseLeave }: any) => {
+const Projects = () => {
   const animationControls = projectsList.map(() => useAnimation());
 
   const handleLinkHover = (index: any) => {
