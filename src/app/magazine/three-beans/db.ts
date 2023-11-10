@@ -54,8 +54,7 @@ export const brand = [
         desc: "It has the tang, it has the sweetness, it has everything you want! It is the Lemon Blueberry Cheesecake! 🍋🫐🍰 Join us at Three Beans Coffee and Eatery and enjoy this exclusive delicacy!",
       },
       {
-        image:
-          "https://i.postimg.cc/yNhNkgvL/277243439-1648495352159831-2378010177705534968-n.jpg",
+        image: "https://i.postimg.cc/J0qKgXDF/saffsaf.jpg",
         desc: "Let’s make Margarita Pizza together. 🍕🍕🍕 Here’s how the kitchen jazz works, everything is made with precision to give you an ultimate experience of newness. Loaded with cheese, topped with sliced tomato and basil. WHOLESOME MAX PRO ULTRA. ",
       },
       {
