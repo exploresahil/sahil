@@ -1,0 +1,67 @@
+@use "@/app/scss/variables" as *;
+
+footer {
+  max-width: 100vw;
+  height: 150px;
+  padding: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $offDark;
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 50px;
+
+  p {
+    font-family: $helvetica-light;
+    position: relative;
+    z-index: 1;
+
+    a {
+      color: $pink;
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        transition: color 300ms ease-in-out;
+        color: $yellow;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    z-index: 1;
+
+    a {
+      svg {
+        width: 20px;
+        height: 20px;
+        transition: color 300ms ease-in-out;
+
+        &:hover {
+          transition: color 300ms ease-in-out;
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1367px) and (orientation: landscape) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 6vw 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 6vw 0;
+  }
+}

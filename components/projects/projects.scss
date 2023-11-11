@@ -1,0 +1,170 @@
+@use "@/app/scss/variables" as *;
+
+#projects {
+  max-width: 100vw;
+
+  background-color: $darkBlue;
+  padding: 50px 6vw 100px 6vw;
+
+  h4 {
+    font-family: $helvetica-regular;
+    font-weight: 100;
+    font-size: 4rem;
+    padding-bottom: 50px;
+    border-bottom: 1px solid $light;
+  }
+
+  .projects-list-container {
+    display: flex;
+    flex-direction: column;
+
+    .project-container {
+      width: 100%;
+      padding: 30px 0;
+      border-bottom: 1px solid $light;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      transition: padding 300ms ease-in-out;
+
+      .circle {
+        position: relative;
+        z-index: 1;
+        width: 40px;
+        aspect-ratio: 1/1;
+        border: 1px solid $pink;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $pink;
+
+        transition: all 300ms ease-in-out;
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+
+      .title-container {
+        position: relative;
+        z-index: 1;
+
+        h3 {
+          font-family: $helvetica-bold;
+          color: $light;
+          font-weight: 100;
+          font-size: 2rem;
+          transition: color 300ms ease-in-out;
+        }
+
+        p {
+          font-family: $helvetica-medium;
+          font-size: 0.6rem;
+          color: $pink;
+          transition: color 300ms ease-in-out;
+          text-transform: uppercase;
+          margin-top: 5px;
+        }
+      }
+
+      .bg {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: $pink;
+        z-index: 0;
+      }
+
+      &:hover {
+        padding: 60px 0;
+        transition: padding 300ms ease-in-out;
+
+        .circle {
+          margin-left: 20px;
+          transition: all 300ms ease-in-out;
+          color: $darkBlue;
+          border: 1px solid $darkBlue;
+        }
+
+        .title-container {
+          h3 {
+            color: $yellow;
+            transition: color 300ms ease-in-out;
+          }
+
+          p {
+            color: $darkBlue;
+            transition: color 300ms ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) and (orientation: portrait) {
+  #projects {
+    .projects-list-container {
+      .project-container {
+        .circle {
+          width: 60px;
+        }
+
+        .title-container {
+          h3 {
+            font-size: 3.2rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1367px) and (orientation: landscape) {
+  #projects {
+    .projects-list-container {
+      .project-container {
+        .circle {
+          width: 60px;
+        }
+
+        .title-container {
+          h3 {
+            font-size: 3.2rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #projects {
+    .projects-list-container {
+      .project-container {
+        .circle {
+          width: 60px;
+        }
+
+        .title-container {
+          h3 {
+            font-size: 3.2rem;
+            transition: transform 300ms ease-in-out;
+            transform-origin: left;
+          }
+          p {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}

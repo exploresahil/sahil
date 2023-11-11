@@ -1,0 +1,41 @@
+@use "@/app/scss/variables" as *;
+
+#magazineHeader {
+  width: 100vw;
+  height: 50px;
+  background-color: $light;
+  color: $dark;
+  padding: 0 4vw;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  z-index: 999;
+
+  a {
+    font-size: 1rem;
+    font-family: $helvetica-bold;
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+
+    span {
+      font-family: $helvetica-light;
+      font-size: 0.8rem;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+//*---------->> Tablet
+
+@media screen and (min-width: 820px) {
+  #magazineHeader {
+    padding: 0 2vw;
+  }
+}
