@@ -31,7 +31,7 @@ const projectsList = [
     number: "05",
     title: "Api",
     description: "CODE | ANIMATION | NEXT | 2023",
-    href: "https://thekapdaproject.vercel.app/",
+    href: "/api-projects",
   },
 ];
 
