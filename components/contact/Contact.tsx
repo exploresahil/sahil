@@ -8,7 +8,7 @@ import { TiTick } from "react-icons/ti";
 import LoadingAnim from "@/components/loading/LoadingAnim";
 import { MouseParallax } from "react-just-parallax";
 
-const Crystal = dynamic(() => import("../Crystal/Crystal"), {
+const Crystal = dynamic(() => import("@/components/Crystal/Crystal"), {
   ssr: false,
 });
 
