@@ -41,6 +41,12 @@ const page = () => {
     speechSynthesis.speak(speaking);
   };
 
+  const onEnter = (e: any) => {
+    if (e.key === "Enter") {
+      e.target.blur();
+    }
+  };
+
   return (
     <section id="wikiword">
       <h2>WikiWord</h2>
@@ -52,6 +58,7 @@ const page = () => {
           id="search"
           value={isWord}
           onChange={(e) => setWord(e.target.value)}
+          onKeyUp={onEnter}
         />
         <button type="submit">
           <BiSearch />
