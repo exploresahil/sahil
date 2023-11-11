@@ -25,7 +25,7 @@ const projectsList = [
     number: "04",
     title: "E-Commerce",
     description: "CODE | ANIMATION | NEXT | 2023",
-    href: "/website-section-layouts",
+    href: "https://thekapdaproject.vercel.app/",
   },
 ];
 
