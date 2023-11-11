@@ -22,7 +22,7 @@ const Header = () => {
   const isAllowedPathname = allowedPathnames.includes(pathname);
 
   return (
-    <header className="projects-header">
+    <section className="projects-header">
       {isAllowedPathname ? (
         <Link href="/projects">
           <TiArrowBack size={20} />
@@ -35,7 +35,7 @@ const Header = () => {
         </Link>
       )}
       {isAllowedPathname && <Nav />}
-    </header>
+    </section>
   );
 };
 

@@ -24,7 +24,7 @@ const brands = [
     cover:
       "https://i.postimg.cc/q7Xrm8y2/321813934-2539267282882867-1065032683129824880-n.jpg",
     desc: "PHOTOGRAPHY - RESEARCH - STRATEGY - DESIGN",
-    year: "2018 - 2023",
+    year: "2022 - 2023",
     link: "/magazine/collective-blends",
   },
   {
@@ -32,7 +32,7 @@ const brands = [
     title: "222 Backyard",
     cover: "https://i.postimg.cc/9XwxfBh3/ESA-2331-19-min.jpg",
     desc: "PHOTOGRAPHY - RESEARCH - STRATEGY - DESIGN",
-    year: "2018 - 2023",
+    year: "2021 - 2022",
     link: "/magazine/222-backyard",
   },
   {
@@ -41,7 +41,7 @@ const brands = [
     cover:
       "https://i.postimg.cc/PJbJ3m8C/311725805-470916581659350-115462037486202544-n.jpg",
     desc: "PHOTOGRAPHY - RESEARCH - STRATEGY - DESIGN",
-    year: "2018 - 2023",
+    year: "2022 - 2023",
     link: "/magazine/dessert-bar",
   },
 ];
