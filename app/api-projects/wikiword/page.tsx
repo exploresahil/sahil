@@ -108,7 +108,73 @@ const page = () => {
         </div>
       )}
 
-      {isError && (
+      {["sahil", "Sahil"].includes(isWord) && (
+        <div className="ifSahil">
+          <div className="text">
+            <h3>{isWord}</h3>
+            <button
+              onClick={() => {
+                handleSpeak("sah HILL");
+              }}
+            >
+              <FaPlay />
+            </button>
+          </div>
+          <div className="data">
+            <p className="phonetic">Sa·hel</p>
+            <p className="meaning">meaning:</p>
+            <p className="meanind-data">
+              Sahil is an Arabic name for boys that means “shore”, “rive bank”,
+              “beach”, “coastline”, “coast”.
+            </p>
+          </div>
+          <div className="data">
+            <p className="partOfSpeech">alternative</p>
+            <p className="meaning">meaning:</p>
+            <p className="meanind-data">
+              He is a person who loves to take pictures and make things look
+              pretty. He is also a developer with a passion for front-end
+              development and design.
+            </p>
+          </div>
+          <div className="data">
+            <p className="partOfSpeech">alternative</p>
+            <p className="meaning">meaning:</p>
+            <p className="meanind-data">
+              He is not only a photographer, but also a brand designer and
+              front-end developer. He loves to work on projects that have a
+              strong visual identity and he believes that the best way to
+              communicate with people is through imagery.
+            </p>
+          </div>
+          <div className="data">
+            <p className="partOfSpeech">alternative</p>
+            <p className="meaning">meaning:</p>
+            <p className="meanind-data">
+              Sahil is an individual who excels in the realm of web development
+              and design. With a keen eye for aesthetics and a deep
+              understanding of technical intricacies, he crafts web applications
+              that are not only visually stunning but also functionally robust.
+              <br />
+              His expertise lies in front-end development, where he applies his
+              design skills to create user interfaces that are intuitive,
+              responsive, and engaging.
+              <br />A true professional, Sahil combines creativity with
+              technical proficiency to deliver digital solutions that elevate
+              user experiences.
+            </p>
+          </div>
+
+          <p className="source-link">
+            Source:{" "}
+            <Link href="https://www.sahilsatpute.in/">
+              https://www.sahilsatpute.in/
+            </Link>
+          </p>
+        </div>
+      )}
+
+      {isError && !["sahil", "Sahil"].includes(isWord) && (
         <div className="not-found">
           <p>No Definitions Found</p>
           <p>

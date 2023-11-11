@@ -139,6 +139,62 @@
       padding: 5px 0;
     }
   }
+
+  .ifSahil {
+    padding: 20px 0 40px 0;
+
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h3 {
+        font-size: 2.2rem;
+        text-transform: capitalize;
+      }
+
+      button {
+        background-color: $pink;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        display: grid;
+        place-items: center;
+
+        &:hover {
+          background-color: $darkBlue;
+        }
+      }
+    }
+
+    .data {
+      .phonetic {
+        font-size: 1.4rem;
+        color: $pink;
+      }
+      .meaning {
+        color: rgb(130, 130, 130);
+        padding: 10px 0 12px 0;
+      }
+
+      .partOfSpeech {
+        padding: 40px 0 0 0;
+        font-style: italic;
+        font-family: $helvetica-bold;
+      }
+    }
+
+    .source-link {
+      margin-top: 50px;
+      color: rgb(130, 130, 130);
+      font-size: 0.8rem;
+
+      a {
+        color: $darkBlue;
+      }
+    }
+  }
 }
 
 //*---------->> Tablet
@@ -167,6 +223,29 @@
             width: 40px;
             height: 40px;
           }
+        }
+      }
+
+      .data {
+        .partOfSpeech {
+          font-size: 1.4rem;
+        }
+
+        .meanind-data {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .ifSahil {
+      .text {
+        h3 {
+          font-size: 4rem;
+        }
+
+        button {
+          width: 40px;
+          height: 40px;
         }
       }
 
