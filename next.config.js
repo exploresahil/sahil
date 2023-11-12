@@ -17,6 +17,11 @@ const nextConfig = {
         hostname: "i.postimg.cc",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "api.qrserver.com",
+        port: "",
+      },
     ],
   },
 };
