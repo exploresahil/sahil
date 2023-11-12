@@ -26,6 +26,12 @@ const page = () => {
     }, 500);
   };
 
+  const onEnter = (e: any) => {
+    if (e.key === "Enter") {
+      e.target.blur();
+    }
+  };
+
   return (
     <section id="qrCode">
       <h2>QrCoader </h2>
@@ -35,6 +41,7 @@ const page = () => {
           placeholder="Enter a URL/Email/Mobile"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
+          onKeyUp={onEnter}
         />
         <button type="submit">
           {loading ? <FaArrowsRotate className="loading" /> : <IoMdCreate />}
