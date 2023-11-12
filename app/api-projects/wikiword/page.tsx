@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { BiSearch } from "react-icons/bi";
 import { FaPlay } from "react-icons/fa";
+import { FaArrowsRotate } from "react-icons/fa6";
 
 interface WordData {
   id: number;
@@ -23,17 +24,28 @@ const page = () => {
   const [isData, setIsData] = useState<WordData[]>([]);
   const [isError, setIsError] = useState(false);
   const [isWord, setWord] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const searchQuery: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     setIsError(false);
-    await fetch(
-      `https://api.dictionaryapi.dev/api/v2/entries/en/${isWord}`
-    ).then(async (response) => {
-      if (response.ok) setIsData(await response.json());
-      else setIsError(true);
-    });
+    try {
+      const response = await fetch(
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${isWord}`
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        setIsData(data);
+      } else {
+        setIsError(true);
+      }
+    } catch (error) {
+      setIsError(true);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleSpeak = (e: string) => {
@@ -61,9 +73,15 @@ const page = () => {
           onKeyUp={onEnter}
         />
         <button type="submit">
-          <BiSearch />
+          {isLoading ? <FaArrowsRotate className="loading" /> : <BiSearch />}
         </button>
       </form>
+
+      {isLoading && (
+        <div className="loading-container">
+          <FaArrowsRotate className="loading" />
+        </div>
+      )}
 
       {!isError && isData.length !== 0 && (
         <div className="data-container">

@@ -5,6 +5,28 @@
   min-height: 100vh;
   padding: 0 6vw;
 
+  .loading-container {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    place-items: center;
+
+    .loading {
+      width: 30px;
+      height: 30px;
+      animation: rotate 1s linear infinite;
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
   h2 {
     text-align: center;
     padding: 20px 0 0 0;
@@ -55,6 +77,12 @@
         svg {
           color: $light;
         }
+      }
+
+      .loading {
+        animation: rotate 1s linear infinite;
+        width: 15px;
+        height: 15px;
       }
     }
   }
