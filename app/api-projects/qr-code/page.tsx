@@ -1,7 +1,7 @@
 "use client";
 
 import "./qrCode.scss";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { ReactSVG } from "react-svg";
 import FileSaver from "file-saver";
 import { IoMdCreate } from "react-icons/io";
@@ -70,8 +70,6 @@ const page = () => {
                 width={1000}
                 height={1000}
                 loading="lazy"
-                placeholder="blur"
-                blurDataURL="/assets/images/load-loading.gif"
               />
             </div>
             <div className="button-container">
