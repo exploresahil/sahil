@@ -75,30 +75,7 @@
         bottom: 0;
         background-color: $pink;
         z-index: 0;
-      }
-
-      &:hover {
-        padding: 60px 0;
-        transition: padding 300ms ease-in-out;
-
-        .circle {
-          margin-left: 20px;
-          transition: all 300ms ease-in-out;
-          color: $darkBlue;
-          border: 1px solid $darkBlue;
-        }
-
-        .title-container {
-          h3 {
-            color: $yellow;
-            transition: color 300ms ease-in-out;
-          }
-
-          p {
-            color: $darkBlue;
-            transition: color 300ms ease-in-out;
-          }
-        }
+        display: none;
       }
     }
   }
@@ -110,6 +87,9 @@
       .project-container {
         .circle {
           width: 60px;
+        }
+        .bg {
+          display: none;
         }
 
         .title-container {
@@ -133,6 +113,10 @@
           width: 60px;
         }
 
+        .bg {
+          display: none;
+        }
+
         .title-container {
           h3 {
             font-size: 3.2rem;
@@ -154,6 +138,10 @@
           width: 60px;
         }
 
+        .bg {
+          display: block;
+        }
+
         .title-container {
           h3 {
             font-size: 3.2rem;
@@ -162,6 +150,30 @@
           }
           p {
             font-size: 0.6rem;
+          }
+        }
+
+        &:hover {
+          padding: 60px 0;
+          transition: padding 300ms ease-in-out;
+
+          .circle {
+            margin-left: 20px;
+            transition: all 300ms ease-in-out;
+            color: $darkBlue;
+            border: 1px solid $darkBlue;
+          }
+
+          .title-container {
+            h3 {
+              color: $yellow;
+              transition: color 300ms ease-in-out;
+            }
+
+            p {
+              color: $darkBlue;
+              transition: color 300ms ease-in-out;
+            }
           }
         }
       }
