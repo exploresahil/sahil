@@ -1,0 +1,157 @@
+@use "@/app/scss/variables" as *;
+
+#qrCode {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 6vw;
+
+  h2 {
+    text-align: center;
+    padding: 20px 0 0 0;
+  }
+
+  .loading {
+    animation: rotate 1s linear infinite;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+
+    input {
+      width: 100%;
+      height: 40px;
+      background-color: $light;
+      border: none;
+      border-radius: 500px;
+      padding: 0 50px 0 20px;
+      outline: none;
+      font-family: $helvetica-regular;
+      letter-spacing: 1px;
+
+      &::placeholder {
+        font-family: $helvetica-regular;
+        color: $offDark;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 2.5px;
+      top: 22.5px;
+      border-radius: 500px;
+      height: 35px;
+      width: 35px;
+      display: grid;
+      place-items: center;
+      background-color: $green;
+      border: none;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      &:hover {
+        background-color: $dark;
+
+        svg {
+          color: $light;
+        }
+      }
+    }
+  }
+
+  .qr-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 0;
+    position: relative;
+
+    .loading {
+      margin: 50px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .qr-code-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      background-color: $light;
+      border-radius: 20px;
+      padding: 10vw;
+
+      button {
+        width: 100%;
+        height: 40px;
+        background-color: $darkBlue;
+        color: $light;
+        border: none;
+        border-radius: 400px;
+
+        &:hover {
+          background-color: $dark;
+        }
+      }
+
+      p {
+        position: absolute;
+        bottom: -40px;
+        color: rgb(130, 130, 130);
+        font-size: 0.8rem;
+
+        a {
+          color: $darkBlue;
+        }
+      }
+    }
+  }
+}
+
+//*---------->> Tablet
+
+@media screen and (min-width: 820px) {
+  #qrCode {
+    form {
+      input {
+        height: 50px;
+        font-size: 1rem;
+      }
+
+      button {
+        height: 45px;
+        width: 45px;
+      }
+    }
+
+    .qr-container {
+      .qr-code-container {
+        width: auto;
+        padding: 40px 40px;
+      }
+    }
+  }
+}
+
+//*---------->> desktop
+
+@media screen and (min-width: 1025px) {
+  #qrCode {
+    padding: 0 26vw;
+  }
+}

@@ -79,13 +79,12 @@ const page = () => {
               </button>
             </div>
           </div>
-
+          {isData[0].phonetic && (
+            <p className="phonetic">{isData[0].phonetic}</p>
+          )}
           <div className="data">
-            {isData[0].phonetic && (
-              <p className="phonetic">{isData[0].phonetic}</p>
-            )}
             {isData[0].meanings.map((meaning, id) => (
-              <div key={id}>
+              <div key={id} className="card">
                 <p className="partOfSpeech">{meaning.partOfSpeech}</p>
                 <p className="meaning">meaning:</p>
                 <p className="meanind-data">
@@ -120,8 +119,8 @@ const page = () => {
               <FaPlay />
             </button>
           </div>
+          <p className="phonetic">Sa·hel</p>
           <div className="data">
-            <p className="phonetic">Sa·hel</p>
             <p className="meaning">meaning:</p>
             <p className="meanind-data">
               Sahil is an Arabic name for boys that means “shore”, “rive bank”,

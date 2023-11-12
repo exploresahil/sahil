@@ -93,14 +93,24 @@
       }
     }
 
+    .phonetic {
+      font-size: 1.4rem;
+      color: $pink;
+    }
+
     .data {
-      .phonetic {
-        font-size: 1.4rem;
-        color: $pink;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px 0;
+
+      .card {
+        background-color: $offDark;
+        border-radius: 20px;
+        padding: 20px;
       }
 
       .partOfSpeech {
-        padding: 40px 0 0 0;
         font-style: italic;
         font-family: $helvetica-bold;
       }
@@ -167,12 +177,18 @@
         }
       }
     }
+    .phonetic {
+      font-size: 1.4rem;
+      color: $pink;
+      margin-bottom: 20px;
+    }
 
     .data {
-      .phonetic {
-        font-size: 1.4rem;
-        color: $pink;
-      }
+      background-color: $offDark;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px 0;
+
       .meaning {
         color: rgb(130, 130, 130);
         padding: 10px 0 12px 0;
