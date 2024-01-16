@@ -18,7 +18,7 @@ const data = [
     title: "#StyleScape | Next Js 13.4",
     image: "/assets/images/stylescape.png",
     desc: "Presenting #stylescape: A Next.js-powered tool that streamlines the creation of detailed brand reports, focusing on design elements. It’s the go-to resource for designers to align a brand’s design direction with its core values and vision, ensuring a consistent and impactful brand identity.",
-    link: "http://13.232.41.249/",
+    link: "https://stylescape.vercel.app/",
   },
 ];
 
