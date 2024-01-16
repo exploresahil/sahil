@@ -14,6 +14,12 @@ const data = [
     desc: "Introducing Halbe: Your trusted partner in Accounting, Finance, and Investments. Built on the reliable WordPress platform, Halbe offers expert solutions tailored to your financial needs. Experience seamless service delivery with a focus on precision and growth. Choose Halbe for a secure financial future.",
     link: "http://13.232.41.249/",
   },
+  {
+    title: "#StyleScape | Next Js 13.4",
+    image: "/assets/images/stylescape.png",
+    desc: "Presenting #stylescape: A Next.js-powered tool that streamlines the creation of detailed brand reports, focusing on design elements. It’s the go-to resource for designers to align a brand’s design direction with its core values and vision, ensuring a consistent and impactful brand identity.",
+    link: "http://13.232.41.249/",
+  },
 ];
 
 const video =
