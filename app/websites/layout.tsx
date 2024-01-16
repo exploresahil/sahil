@@ -14,7 +14,7 @@ export default function RootLayout({
             projects
           </Link>
 
-          <Link href="/websites">Wesbites</Link>
+          <Link href="/websites">Websites</Link>
         </div>
         <p>by Sahil Satpute</p>
       </section>
