@@ -18,14 +18,14 @@ const projectsList = [
   {
     number: "03",
     title: "Design",
-    description: "CODE functionality | NEXT | 2023",
+    description: "CODE functionality | NEXT | 2024",
     href: "/crud",
   },
   {
     number: "04",
-    title: "E-Commerce",
-    description: "CODE | ANIMATION | NEXT | 2023",
-    href: "https://thekapdaproject.vercel.app/",
+    title: "Websites",
+    description: "CODE | ANIMATION | NEXT | 2024",
+    href: "/websites",
   },
   {
     number: "05",

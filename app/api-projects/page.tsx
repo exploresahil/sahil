@@ -1,6 +1,5 @@
-import Image from "next/image";
 import "./apiProjects.scss";
-import Link from "next/link";
+import EachProject from "@/components/projects/eachProjects/EachProject";
 
 const apiProjects = [
   {
@@ -28,24 +27,14 @@ const page = () => {
   return (
     <section id="apiProjects">
       <div className="card-conatiner">
-        {apiProjects.map((project, i) => (
-          <div key={i} className="card">
-            <div className="img-container">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={1000}
-                height={1000}
-              />
-              <div className="img-bg" />
-            </div>
-
-            <div className="text-container">
-              <h3>{project.title}</h3>
-              <p>{project.desc}</p>
-              <Link href={project.link}>view</Link>
-            </div>
-          </div>
+        {apiProjects.map((project, index) => (
+          <EachProject
+            key={index}
+            title={project.title}
+            image={project.image}
+            link={project.link}
+            desc={project.desc}
+          />
         ))}
       </div>
       <div className="video-player">

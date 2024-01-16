@@ -7,7 +7,7 @@ const Header = () => {
   const pathname = usePathname();
 
   // Define an array of pathnames where you want to render the nav element
-  const allowedPathnames = ["/api-projects/wikiword"];
+  const allowedPathnames = ["/api-projects/wikiword", "/api-projects/qr-code"];
 
   // Check if the current pathname is in the allowed pathnames
   const isAllowedPathname = allowedPathnames.includes(pathname);

@@ -1,0 +1,147 @@
+@use "@/app/scss/variables" as *;
+
+#header {
+  width: 100vw;
+  height: 50px;
+  background-color: $light;
+  color: $dark;
+  padding: 0 6vw;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  z-index: 999;
+
+  .links {
+    .projects-link {
+      display: none;
+    }
+
+    a {
+      font-size: 1rem;
+      font-family: $helvetica-bold;
+      color: $dark;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+
+      span {
+        font-family: $helvetica-light;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  a {
+    font-size: 1rem;
+    font-family: $helvetica-bold;
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+
+    span {
+      font-family: $helvetica-light;
+      font-size: 0.8rem;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+#websites-section {
+  width: 100vw;
+  padding: 150px 6vw;
+  position: relative;
+
+  .projects {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .video-player {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+
+    video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+      filter: hue-rotate(280deg);
+    }
+
+    .bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      background-color: rgba(27, 2, 32, 0.75);
+      backdrop-filter: blur(15px);
+    }
+  }
+}
+
+//*---------->> Tablet
+
+@media screen and (min-width: 820px) {
+  #header {
+    padding: 0 6vw;
+  }
+
+  #websites-section {
+    .projects {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+//*---------->> desktop
+
+@media screen and (min-width: 1024px) {
+  #header {
+    .links {
+      .projects-link {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        transform: rotate(-90deg);
+        transform-origin: 100% 0;
+        height: 18px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $helvetica-bold;
+        font-size: 0.5rem;
+        background-color: $green;
+        transition: all 150ms cubic-bezier(0.76, 0, 0.24, 1);
+
+        &:hover {
+          background-color: $dark;
+          color: $light;
+          transition: all 300ms cubic-bezier(0.76, 0, 0.24, 1);
+        }
+      }
+    }
+  }
+  #websites-section {
+    .projects {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
