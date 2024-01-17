@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "./apiProjects.scss";
 import EachProject from "@/components/projects/eachProjects/EachProject";
 
@@ -20,8 +21,8 @@ const apiProjects = [
   },
 ];
 
-const video =
-  "https://assets.mixkit.co/videos/preview/mixkit-texture-of-colored-ink-flowing-in-a-thick-liquid-44821-large.mp4";
+const bg =
+  "https://images.unsplash.com/photo-1636955779321-819753cd1741?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 const page = () => {
   return (
@@ -37,10 +38,13 @@ const page = () => {
           />
         ))}
       </div>
-      <div className="video-player">
-        <video autoPlay muted loop>
-          <source src={video} />
-        </video>
+      <div className="bg-container">
+        <Image
+          src={bg}
+          alt="background"
+          fill
+          sizes="(max-width: 768px) 600px, (max-width: 1200px) 1000px, 2000px"
+        />
         <div className="bg" />
       </div>
     </section>

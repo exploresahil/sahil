@@ -1,7 +1,7 @@
 "use client";
 
 import "./popupMenu.scss";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { dropdownMenuItems, popupMenu } from "@/utils/anim";
 import { useMediaQuery } from "react-responsive";
@@ -30,7 +30,7 @@ const page = () => {
     setIsActive(!isActive);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const dropdownClose = (e: any) => {
       if (
         !popupRef.current?.contains(e.target) &&

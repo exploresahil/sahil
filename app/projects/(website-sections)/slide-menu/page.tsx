@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import "./slideMenu.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import { dropdownMenuItems, slideMenuSlide } from "@/utils/anim";
@@ -29,7 +29,7 @@ const page = () => {
     setIsActive(!isActive);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const dropdownClose = (e: any) => {
       if (
         !slideRef.current?.contains(e.target) &&

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "./tools.scss";
+import "./style.scss";
 
 const abstractOne =
   "https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80";
@@ -7,63 +7,77 @@ const abstractOne =
 const abstractTwo =
   "https://images.unsplash.com/photo-1605106702842-01a887a31122?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60";
 
-const video =
-  "https://assets.mixkit.co/videos/preview/mixkit-texture-of-colored-ink-flowing-in-a-thick-liquid-44821-large.mp4";
+const bg =
+  "https://images.unsplash.com/photo-1636955779321-819753cd1741?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
-function Tools() {
+const data = [
+  {
+    title: "• Development",
+    list: [
+      "html",
+      "css",
+      "scss",
+      "js",
+      "react",
+      "next",
+      "GSAP",
+      "Framer Motion",
+      "sanity",
+      "supabase",
+    ],
+  },
+  {
+    title: "• Creative",
+    list: [
+      "adobe xd",
+      "illustrator",
+      "lightroom",
+      "photoshop",
+      "primere pro",
+      "after effects",
+      "dimension",
+      "stable diffusion",
+    ],
+  },
+];
+
+const Skills = () => {
   return (
-    <>
-      <section id="tools">
-        <h3>Tools</h3>
-        <div className="tools-container">
-          <div className="development-creative-container">
+    <section id="tools">
+      <h3>Tools</h3>
+      <div className="tools-container">
+        {data.map((item, index) => (
+          <div className="development-creative-container" key={index}>
             <div className="icon-container">
-              <Image src={abstractOne} alt="abstract" fill sizes="100" />
+              <Image
+                src={index === 0 ? abstractOne : abstractTwo}
+                alt="abstract"
+                fill
+                sizes="100"
+              />
             </div>
             <div className="items-container">
-              <h4>• Development</h4>
+              <h4>{item.title}</h4>
               <ul>
-                <li>html</li>
-                <li>css</li>
-                <li>scss</li>
-                <li>js</li>
-                <li>react</li>
-                <li>next</li>
-                <li>GSAP</li>
-                <li>Framer Motion</li>
-                <li>sanity</li>
-                <li>supabase</li>
+                {item.list.map((tool, i) => (
+                  <li key={i}>{tool}</li>
+                ))}
               </ul>
             </div>
           </div>
-          <div className="development-creative-container">
-            <div className="icon-container asterisk">
-              <Image src={abstractTwo} alt="abstract" fill sizes="100" />
-            </div>
-            <div className="items-container">
-              <h4>• Creative</h4>
-              <ul>
-                <li>adobe xd</li>
-                <li>illustrator</li>
-                <li>lightroom</li>
-                <li>photoshop</li>
-                <li>primere pro</li>
-                <li>after effects</li>
-                <li>dimension</li>
-                <li>stable diffusion</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="video-player">
-          <video autoPlay muted loop>
-            <source src={video} />
-          </video>
-          <div className="bg" />
-        </div>
-      </section>
-    </>
+        ))}
+      </div>
+      <div className="bg-container">
+        <Image
+          src={bg}
+          alt="background"
+          fill
+          sizes="(max-width: 768px) 600px, (max-width: 1200px) 1000px, 2000px"
+        />
+        <div className="bg" />
+      </div>
+    </section>
   );
-}
+};
 
-export default Tools;
+export default Skills;
