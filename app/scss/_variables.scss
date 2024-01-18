@@ -1,0 +1,30 @@
+@use "./fonts/helvetica/helvetica";
+@use "./fonts/outward/outward";
+
+$helvetica-regular: "Helvetica Now Display Regular", sans-serif;
+$helvetica-medium: "Helvetica Now Display Medium", sans-serif;
+$helvetica-bold: "Helvetica Now Display Bold", sans-serif;
+$helvetica-light: "Helvetica Now Display Light", sans-serif;
+
+$outward: "Outward-block", sans-serif;
+$outward-borders: "Outward-borders", sans-serif;
+$outward-round: "Outward-round", sans-serif;
+
+//*---- color variables ---->
+
+$light: #f6f6f6;
+$offLight: #f2f2f4;
+$dark: #0a0a0a;
+$offDark: #222;
+$textDark: #2a2a2a;
+
+$blue: #4a99ff;
+$pink: #eb6ba8;
+$green: #1ce15f;
+$yellow: #d5ff3f;
+$red: #f42c04;
+$purple: #593c8f;
+$darkBlue: #0a369d;
+$orange: #ff8032;
+
+$gradient: linear-gradient(45deg, $blue, $pink);
