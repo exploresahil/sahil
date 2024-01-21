@@ -21,8 +21,6 @@
   .brand-container {
     opacity: 0;
     width: 100%;
-    //border: 1px solid $offDark;
-    //box-shadow: 2px 2px 5px $offDark;
     border-radius: 10px;
     background-color: $light;
     padding: 6vw;
@@ -31,6 +29,9 @@
     flex-direction: column;
     align-items: center;
     color: $offDark;
+    $shadow: rgba(0, 0, 0, 0.25);
+
+    box-shadow: 0 0 1px $shadow;
 
     h3 {
       border-bottom: 1px solid $offDark;
