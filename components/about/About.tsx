@@ -2,7 +2,7 @@ import Image from "next/image";
 import "./about.scss";
 import Marquee from "react-fast-marquee";
 
-import sahil from "@/public/assets/images/sahil_wes_.png";
+import sahil from "@/public/assets/images/sahil.png";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -93,10 +93,10 @@ function About() {
     gsap.fromTo(
       sahilRef.current,
       {
-        objectPosition: "bottom center",
+        objectPosition: "center 50%",
       },
       {
-        objectPosition: "center center",
+        objectPosition: "center 30%",
         scrollTrigger: {
           trigger: aboutRef.current,
           //markers: true,
@@ -131,7 +131,7 @@ function About() {
             src={sahil}
             alt="sahil satpute profile"
             fill
-            sizes="100"
+            sizes="(max-width: 768px) 600px, (max-width: 1200px) 1000px, 2000px"
             ref={sahilRef}
           />
           <div className="text-container">
