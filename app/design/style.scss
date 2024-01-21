@@ -1,0 +1,133 @@
+@use "@/app/scss/variables" as *;
+
+#designSecton {
+  width: 100vw;
+  background-color: $offLight;
+  padding: 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h2 {
+    font-family: $helvetica-bold;
+    color: $darkBlue;
+  }
+
+  .grid {
+    display: grid;
+    gap: 20px;
+  }
+
+  .brand-container {
+    opacity: 0;
+    width: 100%;
+    //border: 1px solid $offDark;
+    //box-shadow: 2px 2px 5px $offDark;
+    border-radius: 10px;
+    background-color: $light;
+    padding: 6vw;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    color: $offDark;
+
+    h3 {
+      border-bottom: 1px solid $offDark;
+      padding-bottom: 5px;
+      align-self: flex-start;
+      width: 100%;
+      font-family: $helvetica-bold;
+      color: $darkBlue;
+    }
+
+    .img-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 2 / 1;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-family: $helvetica-regular;
+    }
+
+    .links {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      gap: 5px;
+
+      a {
+        flex: 4;
+        background-color: $dark;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        border-radius: 10px;
+
+        &:nth-of-type(2) {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+//*---------->> Tablet
+
+@media screen and (min-width: 820px) {
+  #designSecton {
+    gap: 4vw;
+
+    h2 {
+      text-align: center;
+      font-size: 2.4rem;
+    }
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+//*---------->> desktop
+
+@media screen and (min-width: 1025px) {
+  #designSecton {
+    padding: 4vw 6vw;
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      .brand-container {
+        $time: 300ms;
+        $shadow: rgba(0, 0, 0, 0.25);
+        padding: 30px;
+        box-shadow: 0 0 1px $shadow;
+
+        transition: box-shadow $time cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        &:hover {
+          box-shadow: 2px 2px 5px $shadow;
+        }
+
+        a {
+          transition: background-color 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+          &:hover {
+            background-color: $darkBlue;
+          }
+
+          &:nth-of-type(2) {
+            &:hover {
+              background-color: $pink;
+            }
+          }
+        }
+      }
+    }
+  }
+}

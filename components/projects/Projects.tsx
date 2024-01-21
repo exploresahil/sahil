@@ -19,7 +19,7 @@ const projectsList = [
     number: "03",
     title: "Design",
     description: "CODE functionality | NEXT | 2024",
-    href: "/crud",
+    href: "/design",
   },
   {
     number: "04",
