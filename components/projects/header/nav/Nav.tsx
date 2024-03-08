@@ -22,10 +22,6 @@ const NavItems = [
     title: "Pop-up Menu",
     href: "/projects/popup-menu",
   },
-  {
-    title: "Hover Image Slide Animation",
-    href: "/projects",
-  },
 ];
 
 const Nav = () => {

@@ -21,7 +21,7 @@ const brandData = [
     image: "https://i.postimg.cc/0jpHQX8M/Asset-1-2x.png",
     desc: "Tripusers.com has been a reliable travel partner for a decade, assisting over 10,000 explorers from 14 countries. Their expert team tailors journeys, offering dream destinations, seasonal deals.",
     link: "/design",
-    extLink: "https://travels.poshakwalia.com/",
+    extLink: "https://www.tripusers.com/",
   },
   {
     title: "• brush.ish",
@@ -31,11 +31,11 @@ const brandData = [
     extLink: "https://linktr.ee/brush.ish",
   },
   {
-    title: "• procohat",
-    image: "https://i.postimg.cc/0yzbwCv2/Procohat-black.png",
-    desc: "As a trusted partner, they deliver innovative digital solutions and tailor-made SAAS products, providing clients with a unique competitive advantage and empowering them to envision beyond.",
+    title: "• dessertbar",
+    image: "https://i.postimg.cc/kMZSHWvw/db-dark.png",
+    desc: "Indulge in a decade of sweet success with DessertBar, your culinary companion. Chef Aditi Jain and her team craft dreamy delights and seasonal wonders, tailored for your taste buds.",
     link: "/design",
-    extLink: "https://www.procohat.com/",
+    extLink: "https://www.instagram.com/dessertbar__/",
   },
 ];
 

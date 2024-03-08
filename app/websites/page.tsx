@@ -10,10 +10,10 @@ const data = [
     link: "https://thekapdaproject.vercel.app/",
   },
   {
-    title: "Halbe | Wordpress",
-    image: "/assets/images/halbe.png",
-    desc: "Introducing Halbe: Your trusted partner in Accounting, Finance, and Investments. Built on the reliable WordPress platform, Halbe offers expert solutions tailored to your financial needs. Experience seamless service delivery with a focus on precision and growth. Choose Halbe for a secure financial future.",
-    link: "http://13.232.41.249/",
+    title: "Tripusers | Next Js 14.1",
+    image: "/assets/images/tripusers.png",
+    desc: "Discover refined luxury with Tripusers.com. Tailoring stress-free adventures for individuals and corporations, our expert team crafts personalized international and domestic packages. Welcome to travel elevated, where every moment is a seamless blend of sophistication and adventure.",
+    link: "https://www.tripusers.com",
   },
   {
     title: "#StyleScape | Next Js 13.4",
