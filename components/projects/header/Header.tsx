@@ -24,10 +24,21 @@ const Header = () => {
   return (
     <section className="projects-header">
       {isAllowedPathname ? (
-        <Link href="/projects">
-          <TiArrowBack size={20} />
-          <h2>projects</h2>
-        </Link>
+        <>
+          <div className="left">
+            <Link href="/projects">
+              <TiArrowBack size={20} />
+              <h2>projects</h2>
+            </Link>
+
+            <Link
+              href="https://dev.sahilsatpute.in/projects/website-sections/parallax-scroll"
+              target="_black"
+            >
+              <h2 className="dev">| dev projects</h2>
+            </Link>
+          </div>
+        </>
       ) : (
         <Link href="/">
           <TiArrowBack size={20} />

@@ -2,8 +2,8 @@
 
 header {
   position: relative;
-  max-width: 100vw;
-  padding: 10px 6vw;
+  @include full-width;
+  padding-block: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,19 +32,13 @@ header {
     letter-spacing: 1px;
     transition: color 300ms ease-in-out;
 
+    @include breakpoint(large) {
+      font-size: 6rem;
+    }
+
     &:hover {
       transition: color 200ms ease-in-out;
       color: $green;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  header {
-    padding: 20px 6vw;
-
-    h2 {
-      font-size: 6rem;
     }
   }
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import "./about.scss";
 import Marquee from "react-fast-marquee";
 
-import sahil from "@/public/assets/images/sahil.png";
+import sahil from "@/public/assets/images/sahil-hero.jpg";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

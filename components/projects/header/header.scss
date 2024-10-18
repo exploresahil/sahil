@@ -11,6 +11,20 @@
   z-index: 999;
   background-color: $dark;
 
+  .left {
+    display: flex;
+    gap: rem(10);
+  }
+
+  .dev {
+    color: $green;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   a {
     display: flex;
     align-items: center;

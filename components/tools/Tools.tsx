@@ -22,6 +22,7 @@ const data = [
       "next",
       "GSAP",
       "Framer Motion",
+      "GraphQL",
       "sanity",
       "supabase",
     ],

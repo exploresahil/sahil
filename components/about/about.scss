@@ -21,10 +21,10 @@
     .text-container {
       width: 100%;
       position: absolute;
-      padding: 20px 0;
+      padding-block: 20px;
       bottom: 0;
       left: 0;
-      padding: 20px 6vw;
+      padding-inline: 12vw;
 
       h3,
       h4 {

@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "./fonts/helvetica/helvetica";
 @use "./fonts/outward/outward";
 
@@ -30,3 +31,69 @@ $darkBlue: #0a369d;
 $orange: #ff8032;
 
 $gradient: linear-gradient(45deg, $blue, $pink);
+
+//*--------
+//*-------- Rem/EM functions ---------->
+//*--------
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Don\'t use units when using the rem() function; only numbers.';
+  }
+}
+
+@function em($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + em;
+  } @else {
+    @error 'Don\'t use units when using the em() function; only numbers.';
+  }
+}
+
+//*--------
+//*-------- Breakpoint functions ---------->
+//*--------
+
+$breakpoint-up: (
+  "medium": em(820),
+  "large": em(1025),
+  "xlarge": em(2040),
+);
+
+$breakpoint-down: (
+  "medium": em(819.98),
+  "large": em(1023.98),
+  "xlarge": em(2039.98),
+);
+
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($breakpoint-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media screen and (min-width: map-get($breakpoint-down, $size)) {
+    @content;
+  }
+}
+
+//*--------
+//*-------- Width/Height Variables ---------->
+//*--------
+
+@mixin full-width {
+  width: 100vw;
+  max-width: 100%;
+  padding-inline: 6vw;
+
+  @include breakpoint(large) {
+    padding-inline: 12vw;
+  }
+
+  @include breakpoint(xlarge) {
+    padding-inline: 15vw;
+  }
+}
