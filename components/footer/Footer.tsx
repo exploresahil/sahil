@@ -10,6 +10,12 @@ const Footer = () => {
       <p>
         Designed and Developed by <Link href="/">Sahil Satpute</Link>
       </p>
+      <p>
+        In Development{" "}
+        <Link href="https://dev.sahilsatpute.in/" target="_blank">
+          dev.sahilsatpute.in
+        </Link>
+      </p>
       <div className="social">
         <Link href="https://www.linkedin.com/in/exploresahil/" target="_blank">
           <FaLinkedinIn />

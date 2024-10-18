@@ -21,6 +21,12 @@ const data = [
     desc: "Presenting #stylescape: A Next.js-powered tool that streamlines the creation of detailed brand reports, focusing on design elements. It’s the go-to resource for designers to align a brand’s design direction with its core values and vision, ensuring a consistent and impactful brand identity.",
     link: "https://stylescape.vercel.app/",
   },
+  {
+    title: "thecirclstudio/docs | Next Js 14.2",
+    image: "/assets/images/docs.png",
+    desc: "Explore comprehensive tutorials and code examples for building modern web applications using Next.js 14 and React with TypeScript. Each tutorial offers detailed explanations and code references to help you master these technologies.",
+    link: "https://docs.thecirclstudio.com/",
+  },
 ];
 
 const bg =
