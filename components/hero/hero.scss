@@ -4,7 +4,7 @@
   width: 100vw;
   max-width: 100%;
 
-  height: calc(100vh - 20px - 4rem);
+  height: calc(100vh - 20px - 3rem);
   height: calc(100svh - 20px - 3rem);
 
   display: flex;
@@ -116,7 +116,7 @@
 @media screen and (min-width: 1024px) {
   #hero {
     position: relative;
-    height: calc(100vh - 40px - 6rem);
+    height: calc(100vh - 40px - 5rem);
 
     .hero-title {
       z-index: 2;
