@@ -5,7 +5,7 @@
   max-width: 100%;
 
   height: calc(100vh - 20px - 4rem);
-  height: calc(100svh - 20px - 4rem);
+  height: calc(100svh - 20px - 3rem);
 
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
     justify-content: space-between;
     backdrop-filter: blur(50px);
     padding-block: 40px;
-    padding-inline: 12vw;
+    padding-inline: 6vw;
 
     h2 {
       font-family: $helvetica-light;
@@ -87,6 +87,9 @@
 
 @media screen and (min-width: 820px) {
   #hero {
+    .hero-title {
+      padding-inline: 6vw;
+    }
     .bg-container {
       svg {
         $half: -300px;
@@ -118,6 +121,7 @@
     .hero-title {
       z-index: 2;
       justify-content: center;
+      padding-inline: 6vw;
 
       h2 {
         font-size: 8rem;

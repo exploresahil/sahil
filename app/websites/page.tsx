@@ -22,6 +22,12 @@ const data = [
     link: "https://stylescape.vercel.app/",
   },
   {
+    title: "halbe.co | Wordpress",
+    image: "/assets/images/halbe.png",
+    desc: "Developed the official website for Halbe, a financial solutions provider, through WordPress. The site showcases Halbe’s expertise in delivering strategic financial services to a diverse range of clients. Collaborated with Orangebeak Technologies to create a dynamic, user-friendly platform that reflects the company’s commitment to innovation and excellence.",
+    link: "https://www.halbe.co/",
+  },
+  {
     title: "thecirclstudio/docs | Next Js 14.2",
     image: "/assets/images/docs.png",
     desc: "Explore comprehensive tutorials and code examples for building modern web applications using Next.js 14 and React with TypeScript. Each tutorial offers detailed explanations and code references to help you master these technologies.",

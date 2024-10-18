@@ -92,9 +92,9 @@ const page = () => {
             </div>
             <p>{item.desc}</p>
             <div className="links">
-              <Link href={item.link}>View Project</Link>
-              <Link href={item.extLink} target="_blank">
-                <BiGlobe color="white" size={20} />
+              {/*  <Link href={item.link}>View Project</Link> */}
+              <Link href={item.extLink} target="_blank" className="extLink">
+                View <BiGlobe color="white" size={20} />
               </Link>
             </div>
           </div>
