@@ -14,7 +14,7 @@
     "file-saver": "^2.0.5",
     "framer-motion": "^10.18.0",
     "gsap": "^3.12.4",
-    "next": "14.0.4",
+    "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.2",
